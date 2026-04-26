@@ -1,0 +1,1036 @@
+.load-hidden {
+    visibility: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #0B0033;
+    overflow-x: hidden;
+}
+
+footer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0B0033;
+    z-index: 1000;
+    height: 70px;
+    padding: 10px 0;
+}
+
+h2{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    left: 60px;
+}
+#footerLinks{
+    display: flex;
+    justify-content: space-evenly;
+    width: 550px;
+    position: absolute;
+    left:105ch;
+    top: 3ch;
+}
+#home{
+    color: #0B0033;
+    background-color: white;
+    height: 28px;
+    width: 80px;
+    border-radius:20px;
+    text-align: center;
+    padding-top:6px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid white;
+}
+#home:hover{
+    box-shadow: 0 0 15px white;
+    transform: scale(1.05,1.05);
+    transition-duration: 0.5s;
+}
+.NavigationBar{
+    border: 2px solid white;
+    height: 28px;
+    width: 80px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+.NavigationBar:hover{
+    box-shadow: 0 0 10px rgb(0, 195, 255);
+    transform: scale(1.05,1.05);
+    transition-duration: 0.5s;
+    background-color: rgb(20, 38, 157);
+}
+
+.nameTxt{
+    color: white;
+    position:absolute;
+    top: 9.5ch;
+    left: 7ch;
+    width: 350px;
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 55px;
+}
+.helloTxt{
+    color: white;
+    position:absolute;
+    top: 14ch;
+    left: 13ch;
+    width: 300px;
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.imTxt{
+    color: white;
+    position:absolute;
+    top: 18ch;
+    left: 10ch;
+    width: 700px;
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
+}
+#typed{
+    color: aqua;
+}
+#bioTxt{
+    color: white;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    position: absolute;
+    top: 48ch;
+    left: 22.5ch;
+}
+.iconsBox{
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+    position: absolute;
+    top: 60ch;
+    left: 19ch;
+}
+.boxIcon{
+    width: 45px;
+    height: 53px;
+}
+.iconDiv{
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 1px;
+    background-color: aqua;
+}
+.iconDiv:hover{
+    transform: translateY(-5px) !important;
+    box-shadow: 0 0 10px white !important;
+    transition: 0.3s ease !important;
+}
+#cvBtn{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 57ch;
+    left: 20ch;
+    background-color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    border: 1px solid aqua;
+    border-radius: 40px;
+    font-weight:500;
+}
+#cvBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+}
+#image {
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 2px -13px;
+  object-position: center 1px 10px;
+  border: 2px solid aqua;
+  position: absolute;
+  left: 111ch;
+  top: 20ch;
+  animation: glow 2s infinite alternate;
+  transform: scale(1)
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #7a5cff;
+  }
+  100% {
+    box-shadow: 0 0 50px #00d4ff;
+  }
+}
+#homeSec{
+  min-height: 90vh;
+  padding: 100px 60px;
+}
+#aboutSec{
+  min-height: 90vh;
+  padding: 100px 60px;
+  overflow: hidden;
+  height: 90vh;
+}
+#mainSkill{
+    
+    margin-top: 0;
+    padding-top: 60px;
+    min-height: 112vh;
+}
+
+#contact-section{
+    margin-top: 0;
+    padding-top: 60px;
+    min-height: 90vh;
+}
+
+
+
+
+#aboutMe{
+    color: aqua;
+    position: relative;
+    left: 6ch;
+    display: inline-block;
+    position: relative;
+    top: 1ch;
+}
+#aboutMeNavBar{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 6ch;
+    top: 2ch;
+}
+.aboutMeBtn{
+    width: 120px;
+    height:30px;
+    color: white;
+    background-color: #0B0033;
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    text-align: center;
+    border:0px;
+    cursor: pointer;
+    
+}
+.aboutMeBtn:hover{
+    border-bottom: 3px solid aqua;
+}
+#skillBtn{
+    width:70px;
+}
+#ExperienceBtn{
+    width: 110px;
+}
+#EducationBtn{
+    width: 100px;
+}
+
+#skillTxt{
+    color: white;
+    font-size: 18px;
+    line-height: 35px;
+}
+#skillDetailsDiv{
+    position: relative;
+    left: 12ch;
+    top: 2ch;
+    display: inline-block;
+}
+
+#experienceTxt{
+    color: white;
+    font-size: 18px;
+    line-height: 35px;
+}
+#ExperienceDetailDiv{
+    position: relative;
+    left: 12ch;
+    top: 2ch;
+    display: inline-block;
+}
+
+.skill3TxtDiv{
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+    position: relative;
+    margin-top:-3ch;
+    left:-3ch;
+}
+.skill3Txt{
+    width: 70px;
+    color: white;
+}
+.skillPara{
+    font-size: 50px;
+    width: 120px;
+    font-weight: 550;
+    color: aqua;
+}
+.skillSym{
+    color: white;
+}
+.skillShort{
+    font-size: 25px;
+    position: relative;
+    bottom: 40px;
+}
+.readMoreSkill{
+    width: 130px;
+    height: 40px;
+    background-color: aqua;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 30px;
+    display: block;
+    margin-top: -12px;
+    margin-left: 9ch;
+}
+.readMoreSkill:hover{
+    transform: translateY(-8px);
+    transition: 0.3s ease;
+    box-shadow: 0 0 8px white;
+    cursor: pointer;
+    border: 2px solid aqua;
+}
+.skillPics{
+    width: 130px;
+    height: 100px;
+    filter: invert(1);
+}
+.skillPicsDiv{
+    width: 50px;
+    position: absolute;
+    left: 125ch;
+    top: 123ch;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+.skillPicTxt{
+    color:white;
+}
+.skillPicTxtDiv{
+    width: 180px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 145ch;
+    top: 128ch;
+}
+.skillPicTxt{
+    font-size: 25px;
+    font-weight: 600;
+
+}
+#ExperienceDetailDiv{
+    display: none;
+}
+#skillBtn{
+    border-bottom: 3px solid aqua;
+}
+
+#dotLine{
+    position: absolute;
+    top: 131ch;
+    left: 109ch;
+    height: 55ch;
+}
+
+.education-card {
+    display: none; 
+    background: linear-gradient(90deg, rgba(11, 0, 99, 0.5) 0%, transparent 100%);
+    border-radius: 20px;
+    padding: 25px;
+    width: 90ch;
+    position: relative;
+    left: 6.5ch;
+    top: 0.5ch;
+}
+
+.edu-item {
+    margin-bottom: 20px;
+    border-left: 3px solid aqua;
+    padding-left: 15px;
+}
+
+.edu-item h3 {
+    color: aqua;
+    font-family: 'Times New Roman', serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.edu-item p {
+    color: white;
+    font-size: 18px;
+    margin: 5px 0 0 0;
+}
+
+
+#skillText{
+    color: aqua;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#mainSkillDiv{
+    width: 100ch;
+    position: relative;
+    left: 40ch;    
+}
+
+#skillTextBio{
+    text-align: center;
+    color: whitesmoke;
+    position: relative;
+    bottom: 2ch;
+}
+
+.skillsBox{
+    border: 2px solid rgb(201, 201, 205);
+    width:86rem;
+    height: 60ch;
+    position: relative;
+    left: 7ch;
+    bottom: 1ch;
+    border-radius: 30px;
+    background-color: #0B0033;
+    box-shadow: 0 0 10px aqua;
+}
+
+.htmlbox{
+    width: 19ch;
+    height: 25ch;
+    background-color: #0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    top: 2.7ch;
+    left: 3ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+.htmltext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+
+}
+
+.githubbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom: 124.1ch;
+    left: 124ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.githubtext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+
+.cssbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom: 22.7ch;
+    left: 27ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.csstext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+
+.jsbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:48ch;
+    left: 51ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.jstext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+
+.reactbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:73.5ch;
+    left: 75ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+.reacttext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+.mongobox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:99ch;
+    left: 99.5ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.mongotext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+
+.tailwindbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:149.7ch;
+    left: 148ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+.tailwindtext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+
+.nodejsbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:146.5ch;
+    left: 3ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.nodejstext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+
+.flaskbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:172ch;
+    left: 51ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+.flasktext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+.flutterbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:222.6ch;
+    left: 75ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+.fluttertext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+.dockerbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:197.2ch;
+    left: 27ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+.dockertext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+.firebasebox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:248ch;
+    left: 99.5ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+.firebasetext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+
+.tsbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:273.5ch;
+    left: 124ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+.tstext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+.dgbox{
+    width: 19ch;
+    height: 25ch;
+    background-color:#0B0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    position: relative;
+    bottom:299ch;
+    left: 148ch;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+.dgtext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0px;
+    position: relative;
+    bottom: 0.5ch;
+    color:white;
+}
+
+.skillicons:hover{
+    transform: scale(1.05) !important;
+    transition: transform 0.5s ease-in-out !important;
+    cursor: pointer !important;
+}
+
+
+.contact-text{
+    color: aqua;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+.contact-bio{
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+
+.contact-text-div{
+    position: relative;
+    top: 3ch;
+    left: -3ch;
+}
+
+.contact-input-text{
+    position: relative;
+    width: 40ch;
+    height: 5ch;
+    background-color: #0A0063;
+    border: 2px solid #0B0033;
+    box-shadow:0 0 10px white ;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+    text-transform: capitalize;
+    top: 4ch;
+    left: 22ch;
+}
+.contact-input-email{
+    position: relative;
+    width: 40ch;
+    height: 5ch;
+    background-color: #0A0063;
+    border: 2px solid #0B0033;
+    box-shadow:0 0 10px white ;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+    top: 4ch;
+    left: 27ch;
+}
+.contact-input-email:-webkit-autofill,
+.contact-input-email:-webkit-autofill:hover, 
+.contact-input-email:-webkit-autofill:focus, 
+.contact-input-email:-webkit-autofill:active {
+
+    -webkit-box-shadow: 0 0 0 1000px #0A0063 inset !important;
+    
+    -webkit-text-fill-color: white !important;
+    
+    box-shadow: 0 0 10px white, 0 0 0 1000px #0A0063 inset !important;
+}
+
+.text-description{
+    width: 100ch;
+    height: 20ch;
+    text-align: start;
+    background-color: #0A0063;
+    border: 2px solid #0B0033;
+    box-shadow: 0 0 10px white;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 18px;
+    padding-top: 2ch;
+    color: white;
+    position: relative;
+    top: 8ch;
+    left: 23.5ch;
+    font-size: 18px;
+}
+
+.submitt-contact{
+    background-color: #170d75;
+    width: 17ch;
+    height: 4.5ch;
+    position: relative;
+    top: 12.5ch;
+    right: 70ch;
+    border: 2px solid #0B0033;
+    box-shadow: 0 0 10px white;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 0;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    
+    
+}
+
+.submitt-contact:hover{
+    transform: translateY(-8px) !important;
+    transition: transform 0.5s ease-in-out !important;
+}
+
+.contact-me-div{
+    width: 60ch;
+    height: 7ch;
+    background-color:#0A0063;
+    position: relative;
+    top: 10.5ch;
+    left: 94.5ch;
+    border-radius: 30px;
+    border: 2px solid #0B0033;
+    box-shadow: 0 0 10px white;
+}
+
+.contact-me{
+    width: 12ch;
+    height: 3ch;
+    background-color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 7px;
+    left: 13px;
+    border-radius: 20px;
+    border: none;
+}
+
+.contact-icons{
+    width: 40ch;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 4.8ch;
+    left: 21ch;
+}
+
+
+.helloTxt, .nameTxt, .imTxt, #bioTxt, #image, .iconDiv, #cvBtn, 
+.skillicons, .contact-input-text, .contact-input-email, .text-description,
+#aboutMe, .skill3Txt {
+    visibility: hidden;
+}
+
+#aboutSec {
+    overflow: visible !important;
+    height: auto;
+    min-height: 100vh;
+}
+
+
+.tab-content-box {
+    position: relative;
+    left: 7ch;
+    top: 2ch;
+    width: 80ch;
+    min-height: 250px;
+    display: none;
+    padding-top: 20px; 
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.03);
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    position: relative;
+    left: -1.3ch;
+}
+.skill-item:hover {
+    border-color: aqua;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    transform: translateX(10px);
+}
+.skill-dot {
+    height: 10px;
+    width: 10px;
+    background: aqua;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 0 10px aqua;
+}
+.skill-item p { color: white; font-size: 17px; margin: 0; }
+.skill-item b { color: aqua; }
+
+.exp-card {
+    border-right: 4px solid aqua;
+    background: linear-gradient(90deg, rgba(11, 0, 99, 0.5) 0%, transparent 100%);
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px 0 0 15px;
+    height: 10ch;
+    position: relative;
+    left: -1ch;
+}
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.exp-header h4 { color: aqua; font-size: 22px; margin: 0; }
+.exp-header span { color: #888; font-size: 14px; }
+.exp-card p { color: #ddd; font-size: 16px; line-height: 1.5; }
+
+
+@keyframes itemSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.skill-item, .exp-card, .edu-item, #skillTxt br + text, #experienceTxt br + text {
+    opacity: 0; 
+    animation: itemSlideIn 0.6s ease-out forwards;
+}
+
+.skill-item:nth-child(1), .exp-card:nth-child(1), .edu-item:nth-child(1) { animation-delay: 0.1s; }
+.skill-item:nth-child(2), .exp-card:nth-child(2), .edu-item:nth-child(2) { animation-delay: 0.3s; }
+.skill-item:nth-child(3), .exp-card:nth-child(3), .edu-item:nth-child(3) { animation-delay: 0.5s; }
+.skill-item:nth-child(4), .exp-card:nth-child(4), .edu-item:nth-child(4) { animation-delay: 0.7s; }
+.skill-item:nth-child(5), .exp-card:nth-child(5), .edu-item:nth-child(5) { animation-delay: 0.9s; }
+
