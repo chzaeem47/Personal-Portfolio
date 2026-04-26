@@ -9,6 +9,82 @@ body{
     overflow-x: hidden;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #050015;
+    background-image: 
+        radial-gradient(circle at 10% 10%, rgba(0, 255, 255, 0.2) 0%, transparent 40%),  
+        radial-gradient(circle at 90% 10%, rgba(188, 19, 254, 0.2) 0%, transparent 40%), 
+        radial-gradient(circle at 50% 90%, rgba(0, 81, 255, 0.2) 0%, transparent 50%),  
+        radial-gradient(circle at 80% 50%, rgba(255, 0, 128, 0.15) 0%, transparent 40%); 
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, 
+        rgba(0, 255, 255, 0.08) 0%, 
+        rgba(122, 92, 255, 0.08) 30%, 
+        transparent 60%
+    );
+    animation: crazyMesh 20s infinite alternate linear;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(80px); 
+}
+
+@keyframes crazyMesh {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(5deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(-5deg) scale(1);
+    }
+}
+footer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 10px 0;
+    z-index: 1000;
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    overflow: visible !important;
+}
+
+.NavigationBar, #home {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+#picHome{
+    width: 150ch;
+    height: 83ch;
+    position: relative;
+    bottom: 3ch;
+    left: 32ch;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+
+}
+
 footer{
     position: fixed;
     top: 0;
@@ -25,7 +101,11 @@ h2{
     font-family: 'Times New Roman', Times, serif;
     position: absolute;
     left: 60px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 2px 2px 5px rgba(0, 0, 0, 1);
+    letter-spacing: 2px;
+    margin: 0;
 }
+
 #footerLinks{
     display: flex;
     justify-content: space-evenly;
@@ -241,9 +321,11 @@ h2{
 }
 #ExperienceBtn{
     width: 110px;
+    background: none;
 }
 #EducationBtn{
     width: 100px;
+    background:none;
 }
 
 #skillTxt{
@@ -353,6 +435,7 @@ h2{
 }
 #skillBtn{
     border-bottom: 3px solid aqua;
+    background:none;
 }
 
 #dotLine{
@@ -423,8 +506,14 @@ h2{
     left: 7ch;
     bottom: 1ch;
     border-radius: 30px;
-    background-color: #0B0033;
-    box-shadow: 0 0 10px aqua;
+    background: rgba(255, 255, 255, 0.05) !important; 
+    
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8), 
+                inset 0 0 15px rgba(0, 255, 255, 0.1);
 }
 
 .htmlbox{
@@ -824,9 +913,7 @@ h2{
     position: relative;
     width: 40ch;
     height: 5ch;
-    background-color: #0A0063;
     border: 2px solid #0B0033;
-    box-shadow:0 0 10px white ;
     border-radius: 30px;
     color: white;
     font-size: 20px;
@@ -834,40 +921,50 @@ h2{
     text-transform: capitalize;
     top: 4ch;
     left: 22ch;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
+
 }
 .contact-input-email{
     position: relative;
     width: 40ch;
     height: 5ch;
-    background-color: #0A0063;
-    border: 2px solid #0B0033;
-    box-shadow:0 0 10px white ;
     border-radius: 30px;
     color: white;
     font-size: 20px;
     padding-left: 15px;
     top: 4ch;
     left: 27ch;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
 }
-.contact-input-email:-webkit-autofill,
-.contact-input-email:-webkit-autofill:hover, 
-.contact-input-email:-webkit-autofill:focus, 
-.contact-input-email:-webkit-autofill:active {
 
-    -webkit-box-shadow: 0 0 0 1000px #0A0063 inset !important;
+#contact-section input:focus, 
+#contact-section textarea:focus {
+    outline: none !important;
+    border: 1px solid rgba(19, 137, 254, 0.6) !important;
     
-    -webkit-text-fill-color: white !important;
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.4), 
+                inset 0 0 10px rgba(188, 19, 254, 0.2) !important;
     
-    box-shadow: 0 0 10px white, 0 0 0 1000px #0A0063 inset !important;
+    backdrop-filter: blur(12px) saturate(200%);
+    transition: 0.3s ease;
 }
 
 .text-description{
     width: 100ch;
     height: 20ch;
     text-align: start;
-    background-color: #0A0063;
-    border: 2px solid #0B0033;
-    box-shadow: 0 0 10px white;
     outline: none;
     border-radius: 40px;
     padding-left: 18px;
@@ -877,23 +974,34 @@ h2{
     top: 8ch;
     left: 23.5ch;
     font-size: 18px;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
 }
 
 .submitt-contact{
-    background-color: #170d75;
     width: 17ch;
     height: 4.5ch;
     position: relative;
     top: 12.5ch;
     right: 70ch;
-    border: 2px solid #0B0033;
-    box-shadow: 0 0 10px white;
     border-radius: 30px;
     font-size: 20px;
     padding: 0;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
     
     
 }
@@ -906,13 +1014,17 @@ h2{
 .contact-me-div{
     width: 60ch;
     height: 7ch;
-    background-color:#0A0063;
     position: relative;
     top: 10.5ch;
     left: 94.5ch;
     border-radius: 30px;
-    border: 2px solid #0B0033;
-    box-shadow: 0 0 10px white;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
 }
 
 .contact-me{
