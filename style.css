@@ -881,6 +881,7 @@ h2{
     color:white;
 }
 
+
 .skillicons:hover{
     transform: scale(1.05) !important;
     transition: transform 0.5s ease-in-out !important;
