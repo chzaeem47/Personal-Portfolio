@@ -4,9 +4,10 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    background-color: #0B0033;
-    overflow-x: hidden;
+
+* {
+    scrollbar-width:thin;
+    scrollbar-color: rgba(157, 0, 255, 0.581) #b806e934;
 }
 
 body {
@@ -77,7 +78,7 @@ footer {
     height: 83ch;
     position: relative;
     bottom: 3ch;
-    left: 32ch;
+    left: 33.4ch;
     z-index: -1;
     pointer-events: none;
     -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
