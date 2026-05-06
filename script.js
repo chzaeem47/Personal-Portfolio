@@ -13,7 +13,7 @@ const eduDiv = document.querySelector("#educationPicDetail");
  */
 
 function switchTab(showDiv, activeBtn) {
-    // Hide all
+    
     skillDiv.style.display = "none";
     expeDiv.style.display = "none";
     eduDiv.style.display = "none";
@@ -104,21 +104,19 @@ const navButtons = document.querySelectorAll('.NavigationBar, #home');
 
 navButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // 1. Make the navbar fixed when a button is clicked
+
         navbar.classList.add('nav-active');
 
-        // 2. Optional: Remove the fixed state after the scroll finishes 
-        // (e.g., after 1.5 seconds) so it doesn't stay stuck forever
+        
         setTimeout(() => {
             navbar.classList.remove('nav-active');
         }, 1500); 
     });
 });
 
-// 3. Ensure navbar isn't stuck if the user starts scrolling manually
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
-        // If they scroll manually, we keep it absolute (it disappears)
+        
         navbar.classList.remove('nav-active');
     }
 });
