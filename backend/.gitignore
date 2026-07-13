@@ -1,0 +1,31 @@
+# ==========================================
+# Backend / Node.js
+# ==========================================
+# Dependencies (Never commit these, they are huge!)
+.vscode/
+backend/node_modules/
+node_modules/
+
+# Environment variables (CRITICAL: Keeps your email passwords safe!)
+backend/.env
+backend/.env.local
+.env
+
+# Logs
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+
+# ==========================================
+# Frontend / Build Tools
+# ==========================================
+# If you add or use any environment files or local configurations for the frontend later
+frontend/.env
+frontend/.env.local
+
+# ==========================================
+# Operating System & IDE Files
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/

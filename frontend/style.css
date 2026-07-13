@@ -1,0 +1,7096 @@
+
+.load-hidden {
+    visibility: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    scrollbar-width:thin;
+    scrollbar-color: rgba(157, 0, 255, 0.581) #b806e934;
+}
+
+body {
+    margin:0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #050015;
+    background-image: 
+        radial-gradient(circle at 10% 10%, rgba(0, 255, 255, 0.2) 0%, transparent 40%),  
+        radial-gradient(circle at 90% 10%, rgba(188, 19, 254, 0.2) 0%, transparent 40%), 
+        radial-gradient(circle at 50% 90%, rgba(0, 81, 255, 0.2) 0%, transparent 50%),  
+        radial-gradient(circle at 80% 50%, rgba(255, 0, 128, 0.15) 0%, transparent 40%); 
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+    
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, 
+        rgba(0, 255, 255, 0.08) 0%, 
+        rgba(122, 92, 255, 0.08) 30%, 
+        transparent 60%
+    );
+    animation: crazyMesh 20s infinite alternate linear;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(80px); 
+    
+}
+
+@keyframes crazyMesh {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(5deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(-5deg) scale(1);
+    }
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 10px 0;
+    z-index: 1000;
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    overflow: visible !important;
+}
+
+.NavigationBar, #home {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+#picHome{
+    width: 150ch;
+    height: 83ch;
+    position: relative;
+    bottom: 3ch;
+    left: 33.4ch;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+
+}
+
+h2{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    left: 60px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 2px 2px 5px rgba(0, 0, 0, 1);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+#headerLinks{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60px;
+    position: absolute;
+    left:99ch;
+    top: 3ch;
+    
+}
+
+#home{
+    color: #0B0033;
+    background-color: white;
+    height: 28px;
+    width: 80px;
+    border-radius:20px;
+    text-align: center;
+    padding-top:6px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid white;
+}
+#home:hover{
+    box-shadow: 0 0 15px white;
+    transform: scale(1.05,1.05);
+    transition-duration: 0.5s;
+}
+.NavigationBar{
+    border: 2px solid white;
+    height: 28px;
+    width: 80px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    
+}
+.NavigationBar:hover{
+    box-shadow: 0 0 10px rgb(0, 195, 255);
+    transform: scale(1.05,1.05);
+    transition-duration: 0.5s;
+    background-color: rgb(20, 38, 157);
+}
+
+.nameTxt {
+  background: linear-gradient(90deg, #47d7f8, #2edef5, #f704cf, #f704cf);
+
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 9.5ch;
+  left: 7ch;
+  width: 350px;
+  height: 100px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 55px;
+}
+
+.helloTxt{
+    color: white;
+    position:absolute;
+    top: 14ch;
+    left: 13ch;
+    width: 300px;
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.imTxt{
+    color: white;
+    position:absolute;
+    top: 18ch;
+    left: 10ch;
+    width: 700px;
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
+}
+#typed{
+    color: aqua;
+}
+#bioTxt{
+    color: white;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    position: absolute;
+    top: 48ch;
+    left: 22.5ch;
+}
+.iconsBox{
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+    position: absolute;
+    top: 60ch;
+    left: 19ch;
+}
+.boxIcon{
+    width: 45px;
+    height: 53px;
+}
+.iconDiv{
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 1px;
+    background-color: aqua;
+}
+.iconDiv:hover{
+    transform: translateY(-5px) !important;
+    box-shadow: 0 0 10px white !important;
+    transition: 0.3s ease !important;
+}
+#cvBtn{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 57ch;
+    left: 20ch;
+    background-color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    border: 1px solid aqua;
+    border-radius: 40px;
+    font-weight:500;
+}
+#cvBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+}
+#image {
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 2px -13px;
+  object-position: center 1px 10px;
+  border: 2px solid aqua;
+  position: absolute;
+  left: 111ch;
+  top: 20ch;
+  animation: glow 2s infinite alternate;
+  transform: scale(1)
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #7a5cff;
+  }
+  100% {
+    box-shadow: 0 0 50px #00d4ff;
+  }
+}
+#homeSec{
+  min-height: 90vh;
+  padding: 100px 60px;
+}
+#aboutSec{
+  min-height: 90vh;
+  padding: 100px 60px;
+  overflow: hidden;
+  height: 90vh;
+}
+#mainSkill{
+    
+    margin-top: 0;
+    padding-top: 60px;
+    min-height: 112vh;
+    
+}
+
+#projects{
+    
+    margin-top: 0;
+    padding-top: 60px;
+    min-height: 112vh;
+    
+}
+
+#contact-section{
+    margin-top: 0;
+    padding-top: 60px;
+    min-height: 90vh;
+}
+
+
+
+
+#aboutMe{
+    color: aqua;
+    position: relative;
+    left: 6ch;
+    display: inline-block;
+    position: relative;
+    
+}
+#aboutMeNavBar{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 7ch;
+    top: 0ch;
+}
+.aboutMeBtn{
+    width: 120px;
+    height:30px;
+    color: white;
+    background-color: #0B0033;
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    text-align: center;
+    border:0px;
+    cursor: pointer;
+    
+}
+.aboutMeBtn:hover{
+    border-bottom: 3px solid aqua;
+}
+#skillBtn{
+    width:70px;
+}
+#ExperienceBtn{
+    width: 110px;
+    background: none;
+}
+#EducationBtn{
+    width: 100px;
+    background:none;
+}
+
+#skillTxt{
+    color: white;
+    font-size: 18px;
+    line-height: 35px;
+}
+#skillDetailsDiv{
+    position: relative;
+    left: 12ch;
+    top: 0ch;
+    display: inline-block;
+}
+
+#experienceTxt{
+    color: white;
+    font-size: 18px;
+    line-height: 35px;
+}
+#ExperienceDetailDiv{
+    position: relative;
+    left: 12ch;
+    top: 2ch;
+    display: inline-block;
+}
+
+.skill3TxtDiv{
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+    position: relative;
+    bottom: 4ch;
+    right:3ch;
+}
+.skill3Txt{
+    width: 70px;
+    color: white;
+}
+.skillPara{
+    font-size: 50px;
+    width: 120px;
+    font-weight: 550;
+    color: aqua;
+}
+.skillSym{
+    color: white;
+}
+.skillShort{
+    font-size: 25px;
+    position: relative;
+    bottom: 40px;
+}
+.readMoreSkill{
+    width: 130px;
+    height: 40px;
+    background-color: aqua;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 30px;
+    display: block;
+    position: relative;
+    bottom: 5ch;
+    left: 9ch;
+}
+.readMoreSkill:hover{
+    transform: translateY(-8px);
+    transition: 0.3s ease;
+    box-shadow: 0 0 8px white;
+    cursor: pointer;
+    border: 2px solid aqua;
+}
+.skillPics{
+    width: 130px;
+    height: 100px;
+    filter: invert(1);
+}
+.skillPicsDiv{
+    width: 50px;
+    position: absolute;
+    left: 125ch;
+    top: 123ch;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+.skillPicTxt{
+    color:white;
+}
+.skillPicTxtDiv{
+    width: 180px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 145ch;
+    top: 128ch;
+}
+.skillPicTxt{
+    font-size: 25px;
+    font-weight: 600;
+
+}
+#ExperienceDetailDiv{
+    display: none;
+}
+#skillBtn{
+    border-bottom: 3px solid aqua;
+    background:none;
+}
+
+#dotLine{
+    position: absolute;
+    top: 131ch;
+    left: 109ch;
+    height: 55ch;
+}
+
+.education-card {
+    display: none; 
+    background: linear-gradient(90deg, rgba(11, 0, 99, 0.5) 0%, transparent 100%);
+    border-radius: 20px;
+    padding: 25px;
+    width: 90ch;
+    position: relative;
+    left: 6.5ch;
+    top: 0.5ch;
+}
+
+.edu-item {
+    margin-bottom: 20px;
+    border-left: 3px solid aqua;
+    padding-left: 15px;
+}
+
+.edu-item h3 {
+    color: aqua;
+    font-family: 'Times New Roman', serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.edu-item p {
+    color: white;
+    font-size: 18px;
+    margin: 5px 0 0 0;
+}
+
+
+#skillText{
+    color: aqua;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#mainSkillDiv{
+    width: 100ch;
+    position: relative;
+    left: 40ch; 
+    line-height: 25px;   
+}
+
+#skillTextBio{
+    text-align: center;
+    color: whitesmoke;
+    position: relative;
+    bottom: 2ch;
+}
+
+.skillsBox{
+    border: 2px solid rgb(201, 201, 205);
+    width:86rem;
+    height: 60ch;
+    position: relative;
+    left: 75px;
+    bottom: 1ch;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05) !important; 
+    
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8), 
+                inset 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+
+.contact-text{
+    color: aqua;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+.contact-bio{
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+
+.contact-text-div{
+    position: relative;
+    top: 3ch;
+    left: -3ch;
+}
+
+.contact-input-text{
+    position: relative;
+    width: 40ch;
+    height: 5ch;
+    border: 2px solid #0B0033;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+    text-transform: capitalize;
+    top: 4ch;
+    left: 22ch;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
+
+}
+.contact-input-email{
+    position: relative;
+    width: 40ch;
+    height: 5ch;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+    top: 4ch;
+    left: 27ch;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+#contact-section input:focus, 
+#contact-section textarea:focus {
+    outline: none !important;
+    border: 1px solid rgba(19, 137, 254, 0.6) !important;
+    
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.4), 
+                inset 0 0 10px rgba(188, 19, 254, 0.2) !important;
+    
+    backdrop-filter: blur(12px) saturate(200%);
+    transition: 0.3s ease;
+}
+
+.text-description{
+    width: 100ch;
+    height: 20ch;
+    text-align: start;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 18px;
+    padding-top: 2ch;
+    color: white;
+    position: relative;
+    top: 8ch;
+    left: 23.5ch;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.submitt-contact{
+    width: 17ch;
+    height: 4.5ch;
+    position: relative;
+    top: 12.5ch;
+    right: 70ch;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 0;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
+    
+    
+}
+
+.submitt-contact:hover{
+    transform: translateY(-8px) !important;
+    transition: transform 0.5s ease-in-out !important;
+}
+
+.contact-me-div{
+    width: 60ch;
+    height: 7ch;
+    position: relative;
+    top: 10.5ch;
+    left: 94.5ch;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.contact-me{
+    width: 12ch;
+    height: 3ch;
+    background-color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 7px;
+    left: 13px;
+    border-radius: 20px;
+    border: none;
+}
+
+.contact-icons{
+    width: 40ch;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 4.8ch;
+    left: 21ch;
+}
+
+
+.helloTxt, .nameTxt, .imTxt, #bioTxt, #image, .iconDiv, #cvBtn, 
+.skillicons, .contact-input-text, .contact-input-email, .text-description,
+#aboutMe, .skill3Txt {
+    visibility: hidden;
+}
+
+#aboutSec {
+    overflow: visible !important;
+    height: auto;
+    min-height: 100vh;
+}
+
+
+.tab-content-box {
+    position: relative;
+    left: 7ch;
+    top: 2ch;
+    width: 80ch;
+    min-height: 250px;
+    display: none;
+    padding-top: 20px; 
+}
+
+.skill-item {
+    background: linear-gradient(90deg, rgba(11, 0, 99, 0.5) 0%, transparent 100%);
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    
+    transition: 0.3s;
+    position: relative;
+    left: -1.3ch;
+}
+.skill-item:hover {
+    border-color: aqua;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    transform: translateX(10px);
+}
+.skill-dot {
+    height: 10px;
+    width: 10px;
+    background: aqua;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 0 10px aqua;
+}
+.skill-item p { color: white; font-size: 17px; margin: 0; }
+.skill-item b { color: aqua; }
+
+.exp-card {
+    
+    background: linear-gradient(90deg, rgba(11, 0, 99, 0.5) 0%, transparent 100%);
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px 0 0 15px;
+    height: 10ch;
+    position: relative;
+    left: -1ch;
+    height: 100%;
+}
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.exp-header h4 { color: aqua; font-size: 22px; margin: 0; }
+.exp-header span { color: #888; font-size: 14px; }
+.exp-card p { color: #ddd; font-size: 16px; line-height: 1.5; }
+
+
+@keyframes itemSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.skill-item, .exp-card, .edu-item, #skillTxt br + text, #experienceTxt br + text {
+    opacity: 0; 
+    animation: itemSlideIn 0.6s ease-out forwards;
+}
+
+.skill-item:nth-child(1), .exp-card:nth-child(1), .edu-item:nth-child(1) { animation-delay: 0.1s; }
+.skill-item:nth-child(2), .exp-card:nth-child(2), .edu-item:nth-child(2) { animation-delay: 0.3s; }
+.skill-item:nth-child(3), .exp-card:nth-child(3), .edu-item:nth-child(3) { animation-delay: 0.5s; }
+.skill-item:nth-child(4), .exp-card:nth-child(4), .edu-item:nth-child(4) { animation-delay: 0.7s; }
+.skill-item:nth-child(5), .exp-card:nth-child(5), .edu-item:nth-child(5) { animation-delay: 0.9s; }
+
+
+
+#mainSkill {
+    min-height: auto;
+    padding-bottom: 90px;
+}
+
+.skillsBox {
+    width: 86rem;
+    min-height: auto;
+    height: auto;
+    position: relative;
+    left: 7ch;
+    bottom: 1ch;
+
+    display: grid;
+    grid-template-columns: repeat(9, 10fr);
+    gap: 22px;
+
+    padding: 35px;
+    box-sizing: border-box;
+
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.045) !important;
+    backdrop-filter: blur(14px) saturate(170%);
+    -webkit-backdrop-filter: blur(14px) saturate(170%);
+    border: 1px solid rgba(0, 255, 255, 0.16) !important;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.75),
+        inset 0 0 25px rgba(0, 255, 255, 0.08),
+        0 0 35px rgba(188, 19, 254, 0.12);
+}
+
+.skill-card {
+    height: 120px;
+    width: 120px;
+    border-radius: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color:#0B0033;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, transparent, rgba(0, 0, 0, 0.96), rgba(185, 8, 255, 0.785), transparent);
+    opacity: 0;
+    transition: 0.35s ease;
+    z-index: 0;
+}
+
+.skill-card::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 255, 255, 0.13);
+    border-radius: 50%;
+    filter: blur(20px);
+    top: -25px;
+    right: -25px;
+    opacity: 0.8;
+}
+
+.skill-card img,
+.skill-card p,
+.render-logo {
+    position: relative;
+    z-index: 2;
+}
+
+.skill-card img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.skill-card p {
+    margin: 0;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.035) !important;
+    border-color: rgba(0, 255, 255, 0.55);
+    box-shadow:
+        0 0 18px rgba(0, 255, 255, 0.25),
+        0 0 25px rgba(188, 19, 254, 0.22),
+        inset 0 0 18px rgba(0, 255, 255, 0.12);
+}
+
+.skill-card:hover::before {
+    opacity: 1;
+}
+
+.render-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00f5ff, #7a5cff, #ff2bd6);
+    box-shadow: 0 0 14px rgba(0, 255, 255, 0.4);
+}
+
+.white-icon {
+    filter: invert(1);
+}
+
+#feature-project-text{
+    color: white;
+    font-size: 38px;
+    position: relative; top:17px; left: 31ch;
+}
+
+#project-text{
+    color: #ee00ee;
+    text-shadow: 0 0 3px #2e00fa, 0 0 4px #BC13FE;
+}
+
+#project-text-detail{
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+
+
+/* ================================
+    PROJECT FOLDERS
+   ================================ */
+
+.projects-section {
+    min-height: 100vh;
+    padding: 120px 60px 80px;
+    position: relative;
+}
+
+.projects-folder-wrapper {
+    width: 86rem;
+    height: 54ch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.05) !important; 
+    
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.55),
+        inset 0 0 22px rgba(0, 255, 255, 0.06);
+
+    position: relative;
+    bottom: 6ch;
+   
+    scrollbar-width: none; 
+
+}
+
+.project-folder {
+    height: 370px;
+    border-radius: 22px;
+    position: relative;
+    padding: 22px;
+    box-sizing: border-box;
+    background-color: #0B0033;
+    border-radius: 28px !important;
+    overflow: visible !important;
+    transition: 0.35s ease;
+    margin-bottom: 30px;
+    
+}
+
+
+
+.project-image-box {
+    width: 100%;
+    height: 135px;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    margin-bottom: 16px;
+}
+
+.project-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+
+    transition: 0.4s ease;
+     background:
+        linear-gradient(
+            145deg,
+            rgba(3, 8, 26, 0.95),
+            rgba(10, 18, 48, 0.9)
+        ) padding-box,
+        linear-gradient(
+            135deg,
+            rgba(0, 234, 255, 0.9),
+            rgba(155, 53, 255, 0.85)
+        ) border-box !important;
+
+    border: 1.5px solid transparent !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+        inset 0 0 18px rgba(0, 234, 255, 0.10),
+        0 0 14px rgba(0, 106, 255, 0.22) !important;
+
+    
+}
+
+.project-content h3 {
+    color: white;
+    font-size: 24px;
+    margin: 0 0 7px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.project-content p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 0 0 14px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 17px;
+}
+
+.project-tags span {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 6px 14px;
+    border-radius: 999px;
+
+    background:
+        radial-gradient(circle at 30% 25%, rgba(93, 140, 255, 0.45), transparent 35%),
+        linear-gradient(145deg, #071438, #16073f 55%, #24006b);
+
+    border: 1.5px solid rgba(130, 170, 255, 0.75);
+
+    box-shadow:
+        inset 0 2px 1px rgba(255, 255, 255, 0.25),
+        inset 0 -4px 5px rgba(0, 0, 0, 0.45),
+        0 0 8px rgba(0, 132, 255, 0.55),
+        0 0 14px rgba(153, 0, 255, 0.35);
+
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.45);
+
+    transition: 0.3s ease;
+}
+
+/* Buttons */
+.project-links {
+    display: flex;
+    gap: 14px;
+}
+
+.project-links a {
+    width: 50%;
+    height: 38px;
+
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8, 18, 54, 0.95),
+            rgba(22, 10, 62, 0.92)
+        ) padding-box,
+        linear-gradient(
+            135deg,
+            #00eaff,
+            #2464ff,
+            #b833ff,
+            #ff2df7
+        ) border-box !important;
+
+    border: 2px solid transparent !important;
+    color: white !important;
+
+    box-shadow:
+        0 0 13px rgba(0, 132, 255, 0.28),
+        0 0 18px rgba(179, 51, 255, 0.18),
+        inset 0 0 12px rgba(0, 255, 255, 0.08);
+}
+
+.project-folder:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 0 10px rgba(0, 234, 255, 0.65),
+        0 0 10px rgba(155, 53, 255, 0.45),
+        0 0 10px rgba(255, 45, 247, 0.22),
+        inset 0 0 25px rgba(0, 106, 255, 0.18),
+        inset 0 0 40px rgba(255, 45, 247, 0.10) !important;
+}
+
+.project-folder:hover .project-image-box img {
+    transform: scale(1.06);
+}
+
+.project-links a:hover {
+    box-shadow:
+        0 0 16px rgba(0, 234, 255, 0.55),
+        0 0 28px rgba(179, 51, 255, 0.35),
+        inset 0 0 15px rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-3px);
+}
+
+.projects-folder-wrapper {
+    perspective: 1200px;
+}
+
+.project-folder {
+    opacity: 0;
+    transform: translateY(90px) scale(0.85) rotateX(30deg);
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+}
+
+.project-folder.project-animate {
+    animation: projectEntry 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: calc(var(--delay) * 1ms);
+}
+
+.project-folder.project-reset {
+    opacity: 0;
+    transform: translateY(90px) scale(0.85) rotateX(30deg);
+}
+
+@keyframes projectEntry {
+    0% {
+        opacity: 0;
+        transform: translateY(90px) scale(0.85) rotateX(30deg) rotateY(-18deg);
+    }
+
+    45% {
+        opacity: 1;
+        transform: translateY(-22px) scale(1.06) rotateX(-8deg) rotateY(8deg);
+    }
+
+    70% {
+        transform: translateY(8px) scale(0.98) rotateX(3deg) rotateY(-3deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateX(0deg) rotateY(0deg);
+    }
+}
+
+.project-folder:hover {
+    transform: translateY(-12px) scale(1.03);
+    transition: 0.3s ease;
+    box-shadow:
+        0 0 25px rgba(74, 80, 255, 0.45),
+        0 0 45px rgba(168, 85, 247, 0.35),
+        0 22px 45px rgba(0, 0, 0, 0.55);
+}
+
+/* ======================================
+   PROFESSIONAL SPLASH HERO
+   Does NOT affect navbar or home section
+   ====================================== */
+
+body.splash-active {
+    overflow: hidden;
+}
+
+#splashHero {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(20, 125, 154, 0.458), transparent 40%),
+        radial-gradient(circle at 82% 20%, rgba(169, 7, 233, 0.384), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(19, 69, 177, 0.458), transparent 45%),
+        #050015;
+
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+#splashHero.splash-hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.splash-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 70px 70px;
+    mask-image: radial-gradient(circle at center, black 0%, transparent 72%);
+    opacity: 0.7;
+}
+
+.splash-noise {
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.018) 0px,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+    opacity: 0.28;
+    pointer-events: none;
+}
+
+.splash-light {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.35;
+}
+
+.splash-light-one {
+    top: -120px;
+    left: -100px;
+    background: aqua;
+}
+
+.splash-light-two {
+    right: -130px;
+    bottom: -120px;
+    background: #bc13fe;
+}
+
+.splash-content {
+    position: relative;
+    z-index: 5;
+    width: min(980px, 92%);
+    text-align: center;
+    padding: 30px;
+}
+
+.splash-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 12px 18px;
+    margin-bottom: 34px;
+
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(0, 255, 255, 0.14);
+    backdrop-filter: blur(14px);
+}
+
+.splash-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #00eaff, #1d2cff, #8b1cff);
+    color: white;
+
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -1px;
+
+    box-shadow: 0 0 22px rgba(0, 255, 255, 0.25);
+}
+
+.splash-brand h3 {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.splash-brand p {
+    color: rgba(255, 255, 255, 0.55);
+    margin: 3px 0 0;
+    font-size: 12px;
+    text-align: left;
+}
+
+.splash-label {
+    color: aqua;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin: 0 0 18px;
+    text-shadow: 0 0 14px rgba(0, 255, 255, 0.28);
+    background: linear-gradient(90deg, #ffffff, #00eaff, #b28cff, #ffffff);
+    background-size: 10%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: splashTextFlow 5s linear infinite;
+
+    
+}
+
+.splash-title {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(90px, 15vw, 220px);
+    line-height: 0.82;
+    letter-spacing: 8px;
+
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.88);
+
+    text-shadow:
+        0 0 22px rgba(0, 255, 255, 0.22),
+        0 0 45px rgba(188, 19, 254, 0.18);
+}
+
+.splash-title span {
+    display: block;
+    font-size: clamp(46px, 7vw, 105px);
+    letter-spacing: 7px;
+
+    color: white;
+    -webkit-text-stroke: 0;
+
+    background: linear-gradient(90deg, #ffffff, #00eaff, #b28cff, #ffffff);
+    background-size: 220%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: splashTextFlow 5s linear infinite;
+}
+
+@keyframes splashTextFlow {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 220%;
+    }
+}
+
+.splash-description {
+    width: min(680px, 92%);
+    margin: 28px auto 0;
+
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.splash-buttons {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.splash-primary-btn,
+.splash-secondary-btn {
+    min-width: 180px;
+    height: 54px;
+    border-radius: 999px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.splash-primary-btn {
+    border: none;
+    color: #050015;
+    background: linear-gradient(135deg, #ea00ff, #05a8e3);
+    box-shadow: 0 0 28px rgba(0, 255, 255, 0.28);
+    font-family: serif;
+    font-size: 20px;
+
+}
+
+.splash-primary-btn:hover span {
+    transform: translateX(6px);
+}
+
+.splash-secondary-btn {
+    color: white;
+    background: rgba(77, 18, 18, 0.174);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px);
+}
+
+.splash-primary-btn:hover,
+.splash-secondary-btn:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 0 24px rgba(0, 255, 255, 0.28),
+        0 0 34px rgba(188, 19, 254, 0.16);
+}
+
+.splash-stack {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.splash-stack-left {
+    left: 55px;
+    top: 34%;
+    align-items: center;
+}
+
+.splash-stack-right {
+    right: 55px;
+    top: 34%;
+    align-items: center;
+}
+
+.splash-stack span {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    padding: 11px 18px;
+    border-radius: 999px;
+
+    background: linear-gradient(135deg, #c702f8b2, #05a8e39e);
+    backdrop-filter: blur(10px);
+    animation: splashFloat 4s ease-in-out infinite;
+    align-items: center;
+}
+
+.splash-stack span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.splash-stack span:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.splash-stack span:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+@keyframes splashFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.splash-command {
+    position: absolute;
+    left: 55px;
+    bottom: 45px;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 14px 18px;
+    border-radius: 16px;
+
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(0, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.cmd-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: aqua;
+    opacity: 0.75;
+}
+
+.splash-command p {
+    margin: 0 0 0 8px;
+    color: rgba(255, 255, 255, 0.78);
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+.splash-scroll {
+    position: absolute;
+    right: 55px;
+    bottom: 50px;
+    z-index: 4;
+
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    animation: splashScrollMove 1.6s ease-in-out infinite;
+}
+
+@keyframes splashScrollMove {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.55;
+    }
+    50% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+}
+
+
+/* ==================================================
+   CLEAN PROFESSIONAL SPLASH EXIT + GLASS CARD BRIDGE
+   Does NOT move header, main, or home layout
+   ================================================== */
+
+body.splash-active {
+    overflow: hidden;
+}
+
+#splashHero.splash-pro-exit {
+    animation: splashProExit 0.85s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+    pointer-events: none;
+}
+
+@keyframes splashProExit {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.025) translateY(-32px);
+        filter: blur(12px);
+        visibility: hidden;
+    }
+}
+
+#splashHero.splash-pro-exit .splash-content {
+    animation: splashContentSoftExit 0.65s ease forwards;
+}
+
+@keyframes splashContentSoftExit {
+    to {
+        opacity: 0;
+        transform: translateY(-28px) scale(0.985);
+        filter: blur(10px);
+    }
+}
+
+#splashHero.splash-pro-exit .splash-stack,
+#splashHero.splash-pro-exit .splash-command,
+#splashHero.splash-pro-exit .splash-scroll {
+    animation: splashSideSoftExit 0.6s ease forwards;
+}
+
+@keyframes splashSideSoftExit {
+    to {
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+/* Fixed overlay, so it cannot break page layout */
+.portfolio-bridge {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    pointer-events: none;
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(5, 0, 21, 0);
+}
+
+.portfolio-bridge.bridge-active {
+    visibility: visible;
+    animation: bridgeOverlayIn 1.45s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes bridgeOverlayIn {
+    0% {
+        opacity: 0;
+        background: rgba(5, 0, 21, 0);
+        backdrop-filter: blur(0);
+    }
+
+    22% {
+        opacity: 1;
+        background: rgba(5, 0, 21, 0.84);
+        backdrop-filter: blur(12px);
+    }
+
+    72% {
+        opacity: 1;
+        background: rgba(5, 0, 21, 0.88);
+        backdrop-filter: blur(14px);
+    }
+
+    100% {
+        opacity: 1;
+        background: rgba(5, 0, 21, 0.72);
+        backdrop-filter: blur(8px);
+    }
+}
+
+.portfolio-bridge.bridge-leave {
+    animation: bridgeOverlayOut 0.5s ease forwards;
+}
+
+@keyframes bridgeOverlayOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        backdrop-filter: blur(0);
+    }
+}
+
+/* Soft glass sweep */
+.bridge-glass {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.04) 35%,
+            rgba(0, 255, 255, 0.08) 48%,
+            rgba(188, 19, 254, 0.08) 58%,
+            transparent 100%
+        );
+    transform: translateX(-120%);
+    animation: bridgeGlassSweep 1.15s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes bridgeGlassSweep {
+    to {
+        transform: translateX(120%);
+    }
+}
+
+/* Center premium line */
+.bridge-line {
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 255, 255, 0.75),
+        rgba(255, 255, 255, 0.9),
+        rgba(188, 19, 254, 0.75),
+        transparent
+    );
+
+    box-shadow:
+        0 0 18px rgba(0, 255, 255, 0.55),
+        0 0 28px rgba(188, 19, 254, 0.35);
+
+    animation: bridgeLine 1s ease forwards;
+}
+
+@keyframes bridgeLine {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    35% {
+        width: 62vw;
+        opacity: 1;
+    }
+
+    75% {
+        width: 62vw;
+        opacity: 1;
+    }
+
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.bridge-text {
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%) translateY(16px);
+
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    opacity: 0;
+    animation: bridgeTextIn 1.05s ease forwards;
+}
+
+@keyframes bridgeTextIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(16px);
+        filter: blur(8px);
+    }
+
+    35% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        filter: blur(0);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+        filter: blur(6px);
+    }
+}
+
+/* Hanging glass cards during transition */
+.bridge-hanging-card {
+    position: absolute;
+    width: 155px;
+    height: 110px;
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px) saturate(170%);
+    -webkit-backdrop-filter: blur(18px) saturate(170%);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -18px 30px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    transform-origin: top center;
+    animation: bridgeCardDrop 1.05s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.bridge-hanging-card::before,
+.bridge-hanging-card::after {
+    content: "";
+    position: absolute;
+    top: -82px;
+    width: 1px;
+    height: 82px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255, 255, 255, 0.55)
+    );
+}
+
+.bridge-hanging-card::before {
+    left: 34px;
+}
+
+.bridge-hanging-card::after {
+    right: 34px;
+}
+
+.bridge-hanging-card span {
+    position: absolute;
+    top: -9px;
+    width: 44px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.28);
+}
+
+.bridge-hanging-card h4 {
+    margin: 0 0 6px;
+    color: white;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.bridge-hanging-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 13px;
+}
+
+.card-one {
+    left: 24%;
+    top: 28%;
+    animation-delay: 0.08s;
+}
+
+.card-two {
+    left: 50%;
+    top: 23%;
+    transform: translateX(-50%);
+    animation-delay: 0.18s;
+}
+
+.card-three {
+    right: 24%;
+    top: 28%;
+    animation-delay: 0.28s;
+}
+
+@keyframes bridgeCardDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px) rotate(-8deg) scale(0.92);
+        filter: blur(10px);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translateY(8px) rotate(2deg) scale(1);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg) scale(1);
+        filter: blur(0);
+    }
+}
+
+.portfolio-bridge.bridge-leave .bridge-hanging-card {
+    animation: bridgeCardLeave 0.42s ease forwards;
+}
+
+@keyframes bridgeCardLeave {
+    to {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.96);
+        filter: blur(8px);
+    }
+}
+
+/* Small button feedback */
+.splash-primary-btn.is-launching {
+    animation: cleanBtnPulse 0.45s ease infinite alternate;
+}
+
+@keyframes cleanBtnPulse {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 18px rgba(0, 255, 255, 0.35);
+    }
+
+    to {
+        transform: scale(1.035);
+        box-shadow: 0 0 28px rgba(0, 255, 255, 0.65);
+    }
+}
+
+/* ==================================================
+   HOME SECTION INTRO ONLY AFTER USER ENTERS HOME
+   ================================================== */
+
+#homeSec.home-intro-play #picHome {
+    animation: homeBgReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+#homeSec.home-intro-play .helloTxt {
+    visibility: visible;
+    animation: homeFromTop 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+#homeSec.home-intro-play .nameTxt {
+    visibility: visible;
+    animation: homeFromLeft 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+
+#homeSec.home-intro-play .imTxt {
+    visibility: visible;
+    animation: homeFromRight 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
+}
+
+#homeSec.home-intro-play #bioTxt {
+    visibility: visible;
+    animation: homeFromBottom 1s cubic-bezier(0.16, 1, 0.3, 1) 0.72s both;
+}
+
+#homeSec.home-intro-play #image {
+    visibility: visible;
+    animation:
+        homeImageReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both,
+        glow 2s ease-in-out 1.75s infinite alternate;
+}
+
+#homeSec.home-intro-play .iconDiv {
+    visibility: visible;
+    animation: homeIconPop 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+#homeSec.home-intro-play .iconDiv:nth-child(1) {
+    animation-delay: 1.05s;
+}
+
+#homeSec.home-intro-play .iconDiv:nth-child(2) {
+    animation-delay: 1.18s;
+}
+
+#homeSec.home-intro-play .iconDiv:nth-child(3) {
+    animation-delay: 1.31s;
+}
+
+#homeSec.home-intro-play .iconDiv:nth-child(4) {
+    animation-delay: 1.44s;
+}
+
+#homeSec.home-intro-play #cvBtn {
+    visibility: visible;
+    animation: homeButtonReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) 1.25s both;
+}
+
+@keyframes homeBgReveal {
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(1.03);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
+@keyframes homeFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-45px);
+        filter: blur(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes homeFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-75px);
+        filter: blur(14px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes homeFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(75px);
+        filter: blur(14px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes homeFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(45px);
+        filter: blur(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes homeImageReveal {
+    0% {
+        opacity: 0;
+        transform: translateX(90px) scale(0.82) rotate(8deg);
+        filter: blur(18px);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translateX(-10px) scale(1.04) rotate(-2deg);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1) rotate(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes homeIconPop {
+    0% {
+        opacity: 0;
+        transform: translateY(28px) scale(0.55);
+        filter: blur(8px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.08);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes homeButtonReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(35px) scale(0.85);
+        filter: blur(10px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.04);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* ==================================================
+   CRAZY PROFESSIONAL SPLASH ENTRANCE ANIMATION
+   ================================================== */
+
+#splashHero {
+    perspective: 1400px;
+}
+
+#splashHero .splash-grid {
+    animation: splashGridProfessionalMove 18s linear infinite;
+}
+
+#splashHero .splash-light-one {
+    animation: splashLightOneMove 6.5s ease-in-out infinite alternate;
+}
+
+#splashHero .splash-light-two {
+    animation: splashLightTwoMove 7.5s ease-in-out infinite alternate;
+}
+
+#splashHero:not(.splash-loaded) .splash-label,
+#splashHero:not(.splash-loaded) .splash-title,
+#splashHero:not(.splash-loaded) .splash-description,
+#splashHero:not(.splash-loaded) .splash-buttons,
+#splashHero:not(.splash-loaded) .splash-command,
+#splashHero:not(.splash-loaded) .splash-scroll,
+#splashHero:not(.splash-loaded) .splash-stack span {
+    opacity: 0;
+}
+
+#splashHero.splash-loaded .splash-label {
+    animation: splashLabelIn 0.85s ease 0.15s both;
+}
+
+#splashHero.splash-loaded .splash-title {
+    animation: splashTitleIn 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+
+#splashHero.splash-loaded .splash-description {
+    animation: splashDescriptionIn 0.95s ease 0.75s both;
+}
+
+#splashHero.splash-loaded .splash-buttons {
+    animation: splashButtonsIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1s both;
+}
+
+#splashHero.splash-loaded .splash-command {
+    animation: splashCommandIn 0.9s ease 1.15s both;
+}
+
+#splashHero.splash-loaded .splash-scroll {
+    animation:
+        splashScrollIn 0.8s ease 1.25s both,
+        splashScrollMove 1.6s ease-in-out 2s infinite;
+}
+
+#splashHero.splash-loaded .splash-stack span {
+    animation:
+        splashTechChipIn 0.75s cubic-bezier(0.16, 1, 0.3, 1) both,
+        splashFloat 4s ease-in-out infinite;
+}
+
+#splashHero.splash-loaded .splash-stack span:nth-child(1) {
+    animation-delay: 0.95s, 1.7s;
+}
+
+#splashHero.splash-loaded .splash-stack span:nth-child(2) {
+    animation-delay: 1.08s, 1.9s;
+}
+
+#splashHero.splash-loaded .splash-stack span:nth-child(3) {
+    animation-delay: 1.21s, 2.1s;
+}
+
+#splashHero.splash-loaded .splash-stack span:nth-child(4) {
+    animation-delay: 1.34s, 2.3s;
+}
+
+@keyframes splashGridProfessionalMove {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 0.35;
+    }
+
+    100% {
+        transform: translate3d(80px, 80px, 0) scale(1.08);
+        opacity: 0.55;
+    }
+}
+
+@keyframes splashLightOneMove {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(130px, 90px) scale(1.25);
+    }
+}
+
+@keyframes splashLightTwoMove {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(-140px, -90px) scale(1.28);
+    }
+}
+
+@keyframes splashLabelIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-18px);
+        filter: blur(10px);
+        letter-spacing: 9px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes splashTitleIn {
+    0% {
+        opacity: 0;
+        transform: translateY(85px) scale(1.18) rotateX(18deg);
+        filter: blur(22px);
+        letter-spacing: 24px;
+    }
+
+    58% {
+        opacity: 1;
+        transform: translateY(-12px) scale(0.98) rotateX(-4deg);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateX(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes splashDescriptionIn {
+    0% {
+        opacity: 0;
+        transform: translateY(28px);
+        filter: blur(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes splashButtonsIn {
+    0% {
+        opacity: 0;
+        transform: translateY(34px) scale(0.88);
+        filter: blur(10px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.04);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes splashCommandIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+        filter: blur(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes splashScrollIn {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes splashTechChipIn {
+    0% {
+        opacity: 0;
+        transform: translateY(38px) scale(0.7) rotateZ(-8deg);
+        filter: blur(10px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-6px) scale(1.05) rotateZ(2deg);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateZ(0);
+        filter: blur(0);
+    }
+}
+
+/* ==================================================
+   SLOWER COMFORTABLE SPLASH TO PORTFOLIO BRIDGE
+   ================================================== */
+
+#splashHero.splash-pro-exit {
+    animation: splashProExit 1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+    pointer-events: none;
+}
+
+@keyframes splashProExit {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.025) translateY(-32px);
+        filter: blur(12px);
+        visibility: hidden;
+    }
+}
+
+#splashHero.splash-pro-exit .splash-content {
+    animation: splashContentSoftExit 0.85s ease forwards;
+}
+
+@keyframes splashContentSoftExit {
+    to {
+        opacity: 0;
+        transform: translateY(-28px) scale(0.985);
+        filter: blur(10px);
+    }
+}
+
+.portfolio-bridge.bridge-active {
+    visibility: visible;
+    animation: bridgeOverlayIn 3.15s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes bridgeOverlayIn {
+    0% {
+        opacity: 0;
+        background: rgba(5, 0, 21, 0);
+        backdrop-filter: blur(0);
+    }
+
+    18% {
+        opacity: 1;
+        background: rgba(5, 0, 21, 0.84);
+        backdrop-filter: blur(12px);
+    }
+
+    78% {
+        opacity: 1;
+        background: rgba(5, 0, 21, 0.88);
+        backdrop-filter: blur(14px);
+    }
+
+    100% {
+        opacity: 1;
+        background: rgba(5, 0, 21, 0.72);
+        backdrop-filter: blur(8px);
+    }
+}
+
+.bridge-glass {
+    animation: bridgeGlassSweep 2.65s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.bridge-line {
+    animation: bridgeLine 2.55s ease forwards;
+}
+
+.bridge-text {
+    animation: bridgeTextIn 2.75s ease forwards;
+}
+
+.bridge-hanging-card {
+    animation: bridgeCardDrop 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.card-one {
+    left: 24%;
+    top: 28%;
+    animation-delay: 0.2s;
+}
+
+.card-two {
+    left: 50%;
+    top: 23%;
+    transform: translateX(-50%);
+    animation-delay: 0.45s;
+}
+
+.card-three {
+    right: 24%;
+    top: 28%;
+    animation-delay: 0.7s;
+}
+
+.portfolio-bridge.bridge-leave {
+    animation: bridgeOverlayOut 0.8s ease forwards;
+}
+
+.portfolio-bridge.bridge-leave .bridge-hanging-card {
+    animation: bridgeCardLeave 0.75s ease forwards;
+}
+
+@keyframes bridgeCardLeave {
+    to {
+        opacity: 0;
+        transform: translateY(-34px) scale(0.96);
+        filter: blur(8px);
+    }
+}
+
+/* ==================================================
+   SPLASH HANGING GLASS TECH CARDS
+   Does not affect portfolio layout
+   ================================================== */
+
+#splashHero {
+    overflow: hidden;
+}
+
+#splashHero .splash-content {
+    position: relative;
+    z-index: 7;
+}
+
+.splash-hanging-cards {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    perspective: 1200px;
+}
+
+.splash-tech-card {
+    --rotate: 0deg;
+    --wire-height: 160px;
+    --card-delay: 1s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+    position: absolute;
+    width: 92px;
+    height: 128px;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background:
+        linear-gradient(145deg, rgba(18, 30, 76, 0.45), rgba(54, 20, 89, 0.35) 55%, rgba(5, 10, 34, 0.78)),
+        radial-gradient(circle at 35% 15%, rgba(255, 255, 255, 0.35), transparent 26%);
+
+    border: 1.5px solid rgba(210, 240, 255, 0.65);
+
+    box-shadow:
+        0 0 10px rgba(0, 225, 255, 0.65),
+        0 0 24px rgba(153, 63, 255, 0.48),
+        inset 0 0 18px rgba(255, 255, 255, 0.13),
+        inset 0 -18px 25px rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+
+    transform-origin: top center;
+    transform: rotate(var(--rotate));
+    opacity: 1;
+}
+
+.splash-tech-card::before {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    pointer-events: none;
+}
+
+.splash-tech-card::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.55), transparent 35%, rgba(255, 0, 255, 0.48));
+    opacity: 0.45;
+    filter: blur(7px);
+    z-index: -1;
+}
+
+.card-glass-shine {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 45%;
+    height: 65%;
+    border-radius: 16px;
+    background: linear-gradient(120deg, rgba(4, 174, 236, 0.388), transparent 65%);
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.splash-tech-card img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.25));
+}
+
+.splash-tech-card p {
+    margin: 0;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.55);
+    position: relative;
+    z-index: 2;
+}
+
+.card-express h3 {
+    margin: 0;
+    color: white;
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 14px rgba(255, 255, 255, 0.45);
+}
+
+.splash-white-icon {
+    filter: invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.35)) !important;
+}
+
+.card-wire {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 2px;
+    height: var(--wire-height);
+    transform: translateX(-50%);
+    background: linear-gradient(
+        to bottom,
+        rgba(190, 220, 255, 0.1),
+        rgba(132, 196, 255, 0.75),
+        rgba(210, 240, 255, 0.9)
+    );
+    box-shadow:
+        0 0 7px rgba(0, 225, 255, 0.65),
+        0 0 14px rgba(155, 72, 255, 0.45);
+}
+
+.card-hook {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 2px solid rgba(220, 240, 255, 0.85);
+    background: rgba(10, 16, 45, 0.8);
+    box-shadow:
+        0 0 8px rgba(0, 255, 255, 0.75),
+        inset 0 0 7px rgba(255, 255, 255, 0.25);
+}
+
+.card-hook::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 2px;
+    height: 9px;
+    transform: translateX(-50%);
+    background: rgba(220, 240, 255, 0.85);
+    box-shadow: 0 0 8px aqua;
+}
+
+/* Exact card positions like screenshot */
+.card-html {
+    left: 12.4%;
+    top: 30%;
+    --rotate: -2deg;
+    --wire-height: 280px;
+    --card-delay: 0.95s;
+}
+
+.card-css {
+    left: 24.3%;
+    top: 36%;
+    width: 82px;
+    height: 108px;
+    --rotate: 4deg;
+    --wire-height: 260px;
+    --card-delay: 1.1s;
+}
+
+.card-css img {
+    width: 46px;
+    height: 46px;
+}
+
+.card-js {
+    left: 19%;
+    top: 55%;
+    width: 84px;
+    height: 124px;
+    --rotate: -1deg;
+    --wire-height: 420px;
+    --card-delay: 1.25s;
+}
+
+.card-node {
+    right: 24.2%;
+    top: 15%;
+    width: 92px;
+    height: 122px;
+    --rotate: 1deg;
+    --wire-height: 120px;
+    --card-delay: 1s;
+}
+
+.card-express {
+    right: 15.7%;
+    top: 33%;
+    width: 150px;
+    height: 112px;
+    --rotate: -1deg;
+    --wire-height: 245px;
+    --card-delay: 1.15s;
+}
+
+.card-mongo {
+    right: 21%;
+    top: 58%;
+    width: 92px;
+    height: 132px;
+    --rotate: 1.5deg;
+    --wire-height: 73px;
+    --card-delay: 1.3s;
+}
+
+.card-github {
+    right: 9.7%;
+    top: 60%;
+    width: 94px;
+    height: 130px;
+    --wire-height: 450px;
+    --card-delay: 1.45s;
+     --rotate: -2deg;
+    --side-rotate: 200deg;
+}
+
+/* Entrance with your old splash-loaded class */
+#splashHero:not(.splash-loaded) .splash-tech-card {
+    opacity: 0;
+}
+
+#splashHero.splash-loaded .splash-tech-card {
+    animation:
+        splashCardDropIn 0.95s cubic-bezier(0.16, 1, 0.3, 1) var(--card-delay) both,
+        splashCardSwing 4.8s ease-in-out calc(var(--card-delay) + 0.9s) infinite;
+}
+
+.splash-hanging-cards {
+    perspective: 1200px;
+}
+
+.splash-tech-card {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform-origin: top center;
+}
+
+@keyframes splashCardSwing {
+    0%, 100% {
+        transform: translateY(0) rotate(var(--rotate)) rotateY(-22deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(var(--rotate)) rotateY(22deg);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES - ADD THIS AT THE END OF style.css
+   This block does not change your default desktop design.
+   It only overrides layout at specific screen sizes.
+   ========================================================= */
+
+/* ---------- Very large screens ---------- */
+@media (min-width: 1700px) {
+    #headerLinks {
+        left: auto;
+        right: 7vw;
+    }
+
+    h2 {
+        left: 7vw;
+    }
+
+    .skillsBox,
+    .projects-folder-wrapper {
+        width: min(86rem, calc(100vw - 220px));
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #mainSkillDiv {
+        width: min(100ch, 70vw);
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #feature-project-text {
+        left: auto;
+        text-align: center;
+    }
+    
+}
+
+/* ---------- Normal laptops / smaller desktop screens ---------- */
+@media (max-width: 1440px) {
+    header {
+        height: 70px;
+    }
+
+    h2 {
+        left: 45px;
+    }
+
+    #headerLinks {
+        left: auto;
+        right: 35px;
+        width: 560px;
+    }
+
+    #homeSec {
+        position: relative;
+        min-height: 760px;
+        padding: 100px 45px 60px;
+    }
+
+    #picHome {
+        position: absolute;
+        width: 1320px;
+        height: auto;
+        left: 20vw;
+        top: 70px;
+        bottom: auto;
+    }
+
+    .helloTxt {
+        top: 155px;
+        left: 7vw;
+        font-size: 29px;
+    }
+
+    .nameTxt {
+        top: 205px;
+        left: 7vw;
+        font-size: 52px;
+    }
+
+    .imTxt {
+        top: 315px;
+        left: 7vw;
+        font-size: 36px;
+        width: 620px;
+    }
+
+    #bioTxt {
+        top: 445px;
+        left: 7vw;
+    }
+
+    .iconsBox {
+        top: 555px;
+        left: 7vw;
+    }
+
+    #cvBtn {
+        top: 650px;
+        left: 7vw;
+    }
+
+    #image {
+        width: 380px;
+        height: 380px;
+        left: auto;
+        right: 5vw;
+        top: 160px;
+    }
+
+    #aboutSec {
+        position: relative;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .skillPicsDiv {
+        left: auto;
+        right: 15vw;
+        top: 70px;
+    }
+
+    .skillPicTxtDiv {
+        left: auto;
+        right: 2vw;
+        top: 120px;
+    }
+
+    #dotLine {
+        left: auto;
+        right: 31vw;
+        top: 155px;
+    }
+
+    #mainSkillDiv {
+        width: min(95ch, calc(100% - 90px));
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skillsBox {
+        width: 100%;
+        min-width: 150px;
+        left: 45px;
+        grid-template-columns: repeat(7, 1fr);
+        position: relative;
+        left: 11ch;
+    }
+
+    #feature-project-text {
+        left: auto;
+        text-align: center;
+    }
+
+    .projects-section {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .projects-folder-wrapper {
+        width: 100% auto !important;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        position: absolute;
+        top: 4ch;
+        left: 10ch;
+        
+    }
+
+    .project-folder {
+        padding: 18px;
+    }
+
+    .text-description {
+        width: min(100ch, 72vw);
+        left: 13vw;
+    }
+
+    .helloTxt{
+        position: relative;
+        top: 6ch;
+    }
+    .nameTxt{
+        position: relative;
+        top: 6ch;
+        left: -3.5ch;
+    }
+    .imTxt{
+        position: relative;
+        top: 12ch;
+        left: -23.5ch;
+    }
+    #bioTxt{
+        position: absolute;
+        top: 46ch; left: 15ch;
+    }
+    .iconsBox{
+        position: relative;
+        top: 40ch;
+        left: 5ch;
+    }
+    #cvBtn{
+        position: relative;
+        top: 36ch;
+    }
+    .skillPicTxtDiv{
+        position: absolute;
+        right: 13ch;
+        top: 17ch;
+    }
+    .skillPicsDiv{
+        position: absolute;
+        top: 11ch;
+        right: 50ch
+    }
+    #dotLine{
+        position: absolute;
+        right:55ch;
+        top: 19ch;
+    }
+    .project-text-div{
+        position: relative;
+        left: 21ch;
+    }
+    .contact-text-div{
+        position: relative;
+        left: 17ch;
+        top: -3ch;
+    }
+    .contact-input-email{
+        position: relative;
+        top: 1ch;
+        left: 34ch;
+    }
+    .contact-input-text{
+        position: relative;
+        top: 1ch;
+        left: 30ch;
+    }
+    .text-description{
+        position: relative;
+        top: 5ch;
+        left: 32ch;
+    }
+    .submitt-contact{
+        position: relative;
+        top:10ch;
+        left: -62ch;
+        
+    }
+    .contact-me-div{
+        position: relative;
+        top: 8ch;
+        left: 100ch;
+        width: 60ch;
+    }
+    #mainSkillDiv{
+        position: relative;
+        left: 19ch;
+    }
+    
+    
+}
+
+/* ---------- Small laptops / large tablets ---------- */
+@media (max-width: 1200px) {
+    h2 {
+        left: 32px;
+    }
+    
+    
+    #headerLinks {
+        right: 25px;
+        width: 500px;
+    }
+
+    #home,
+    .NavigationBar {
+        width: 76px;
+        font-size: 16px;
+    }
+
+    #homeSec {
+        min-height: 730px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    #picHome {
+        width: 170ch;
+        height: 500px;
+        left: 2vw;
+        top: 150px;
+    }
+
+    .helloTxt{
+        position: relative;
+        top: 6ch;
+
+    }
+    .nameTxt{
+        position: relative;
+        top: 6.7ch;
+        left:-4.5ch;
+        font-size: 46px;
+        width: 330px;
+    }
+    .imTxt{
+       position: absolute;
+       left:6.3ch;
+       font-size: 32px;
+       width: 560px;
+       top: 20ch;
+
+    }
+    
+    .iconsBox{
+        position: relative;
+        top: 43ch;
+        left: 4ch;
+    }
+
+    #cvBtn {
+        position: relative;
+        top: 39ch;
+        left: 7ch;
+
+    }
+
+    #bioTxt {
+        width: 370px;
+        line-height: 1.6;
+        position: absolute;
+        position:absolute;
+        left: 13ch;
+        top: 45ch;
+        
+    }
+
+    #image {
+        width: 400px;
+        height: 400px;
+        left: 95ch;
+        top: 170px;
+    }
+
+    
+    #aboutMeNavBar{
+        left: -4vw;
+    }
+    #aboutMe,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv{
+        left: 0;
+    }
+    .education-card {
+        left: -5ch;
+    }
+
+    .tab-content-box,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv {
+        width: min(72ch, 58vw);
+    }
+
+    .education-card {
+        width: min(72ch, 58vw);
+    }
+
+    .skill3TxtDiv {
+        width: min(650px, 58vw);
+        right: 10ch;
+    }
+
+    .skillPicsDiv {
+        right: 5vw;
+        top: 9vw;
+    }
+
+    .skillPicTxtDiv {
+        right: 10vw;
+        top: 14vw;
+    }
+
+    
+    .readMoreSkill{
+        left:1vw;
+    }
+
+    .skillsBox {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 18px;
+        padding: 28px;
+    }
+
+    .skill-card {
+        width: 112px;
+        height: 112px;
+    }
+
+    .projects-folder-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        min-height: 54ch;
+        overflow-y: visible;
+        position: relative;
+        left: 1ch;
+        width: 160ch;
+    }
+
+    .project-folder {
+        height: auto;
+        min-height: 370px;
+    }
+
+    .contact-input-text,
+    .contact-input-email {
+        width: 34ch;
+    }
+
+    .text-description {
+        width: 78ch;
+        left: 10vw;
+    }
+
+    .contact-me-div {
+        width: 46ch;
+        right: 5vw;
+    }
+
+    .contact-icons {
+        width: 30ch;
+    }
+    .project-text-div{
+        position: relative;
+        left: auto;
+    }
+    .skillsBox{
+        width: 148ch;
+        top: 20ch;
+        margin-bottom: 40ch;
+    }
+    #mainSkillDiv{
+        position: relative;
+        left: 12ch;
+        top: 14ch;
+    }
+    .contact-text-div{
+        position: relative;
+        left: 11ch;
+        top: -6ch;
+    }
+    .contact-input-email{
+        position: relative;
+        left: 18ch;
+        top: 0ch;
+    }
+    .contact-input-text{
+        position: relative;
+        left: 15ch;
+        top: 0ch;
+    }
+    .text-description{
+        position: relative;
+        left: 18.5ch;
+        top: 3ch;
+    }
+    .submitt-contact{
+        position: relative;
+        top: 8ch;
+        left: -55ch;
+    }
+    .contact-me-div{
+        width: 53ch;
+        position: relative;
+        top: 4.5ch;
+        left: 69ch;
+    }
+    .contact-me{
+        margin-left: -5px;
+    }
+    .skillsBox{
+        position: relative;
+        left: 13ch;
+    }
+    #splashHero{
+        width: 173.5ch;
+        height: 100%;
+    }
+   
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+    header {
+        height: auto;
+        min-height: 76px;
+        padding: 12px 22px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        gap: 16px;
+        background: rgba(5, 0, 21, 0.55) !important;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+
+    h2 {
+        position: relative;
+        left: auto;
+        flex: 0 0 auto;
+    }
+
+    #headerLinks {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        width: auto;
+        flex: 1;
+        justify-content: flex-end;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    #home,
+    .NavigationBar {
+        width: 72px;
+        height: 27px;
+        padding-top: 7px;
+        font-size: 15px;
+    }
+
+    #homeSec {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: auto;
+        padding: 140px 28px 70px;
+        overflow: hidden;
+    }
+
+    #picHome {
+        visibility: hidden;
+    }
+
+    .helloTxt,
+    .nameTxt,
+    .imTxt,
+    #bioTxt,
+    #image,
+    .iconsBox,
+    #cvBtn {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: min(100%, 720px);
+        height: auto;
+    }
+
+    .helloTxt {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .nameTxt {
+        font-size: 50px;
+        margin-bottom: 12px;
+    }
+
+    .imTxt {
+        font-size: 34px;
+        margin-bottom: 18px;
+    }
+
+    #bioTxt {
+        font-size: 17px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    #image {
+        order: 5;
+        width: 310px;
+        height: 310px;
+        margin: 4px auto 28px;
+    }
+
+    .iconsBox {
+        order: 6;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 24px;
+    }
+
+    #homeSec > a {
+        order: 7;
+        display: block;
+    }
+
+    #cvBtn {
+        width: 150px;
+        height: 50px;
+    }
+
+    #aboutSec,
+    #mainSkill,
+    #projects,
+    #contact-section {
+        min-height: auto;
+        padding: 90px 28px 70px;
+        box-sizing: border-box;
+    }
+
+    #aboutSec {
+        position: relative;
+        overflow: hidden !important;
+    }
+
+    #aboutMe {
+        display: block;
+        text-align: center;
+        left: auto;
+        margin: 0 auto 22px;
+    }
+
+    #aboutMeNavBar {
+        width: min(500px, 100%);
+        left: auto;
+        margin: 0 auto 20px;
+    }
+
+    .tab-content-box,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv,
+    .education-card {
+        left: auto;
+        top: auto;
+        width: min(760px, 100%);
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .skill-item,
+    .exp-card {
+        left: auto;
+    }
+
+    .skill3TxtDiv {
+        width: min(760px, 100%);
+        right: auto;
+        bottom: auto;
+        margin: 30px auto 0;
+        gap: 20px;
+    }
+
+    .skill3Txt {
+        width: 32%;
+        text-align: center;
+    }
+
+    .skillPara {
+        width: auto;
+        font-size: 44px;
+        margin-bottom: 20px;
+    }
+
+    .skillShort {
+        font-size: 21px;
+        bottom: 25px;
+    }
+
+    .readMoreSkill {
+        left: auto;
+        bottom: auto;
+        margin: 8px auto 0;
+    }
+
+    .skillPicsDiv,
+    .skillPicTxtDiv,
+    #dotLine {
+        display: none;
+    }
+
+    #mainSkillDiv {
+        width: min(760px, 100%);
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skillsBox {
+        width: min(760px, 100%);
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        gap: 20px;
+        padding: 28px;
+    }
+
+    #feature-project-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: center;
+        font-size: 34px;
+        margin: 0 0 18px;
+    }
+
+    #project-text-detail {
+        line-height: 1.7;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    .projects-section {
+        min-height: auto;
+        padding: 40px 0 0;
+    }
+
+    .projects-folder-wrapper {
+        width: min(850px, 100%);
+        height: auto;
+        min-height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        overflow: visible;
+        bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 22px;
+        padding: 24px;
+        position: relative;
+        top: -1ch;
+        left: 0.5ch;
+    }
+
+    .project-folder {
+        height: auto;
+        min-height: 360px;
+        margin-bottom: 0;
+    }
+
+    .contact-text-div {
+        top: auto;
+        left: auto;
+        width: min(760px, 100%);
+        margin: 0 auto 30px;
+    }
+
+    .contact-input-text,
+    .contact-input-email,
+    .text-description,
+    .submitt-contact,
+    .contact-me-div {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: min(640px, 100%);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .contact-input-text,
+    .contact-input-email {
+        margin-bottom: 18px;
+    }
+
+    .text-description {
+        height: 220px;
+        margin-bottom: 22px;
+    }
+
+    .submitt-contact {
+        width: 170px;
+        margin-bottom: 32px;
+    }
+
+    .contact-me-div {
+        height: auto;
+        min-height: 74px;
+        padding: 10px 14px;
+    }
+
+    .contact-me {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0 auto 12px;
+    }
+
+    .contact-icons {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .project-text-div{
+        position: relative;
+        top: 8ch;
+        left: 1ch;
+    }
+    .contact-me{
+        width: 100%;
+    }
+    #splashHero{
+        width: 124ch;
+        height: 100ch;
+        
+    }
+    .splash-title{
+        font-size: 180px;
+    }
+    .splash-label{
+        font-size: 15px;
+    }
+    .splash-stack-left{
+        visibility: hidden;
+    }
+    .splash-stack-right{
+        visibility: hidden;
+    }
+    .splash-primary-btn{
+        height: 4ch;    
+    }
+    .splash-secondary-btn{
+        height: 4ch;
+        font-size: 20px;
+    }
+    .card-html{
+        position: relative;
+        left: 3ch;
+    }
+    .card-js{
+        position: relative;
+        left: 15ch;
+        top: 15ch;
+    }
+    .card-css{
+        position: relative;
+        top: 10ch;
+        left: 25ch;
+    }
+    .card-github{
+       position: relative;
+       left: 100ch;
+       top: 7ch;
+    }
+}
+
+/* ---------- Phones and small tablets ---------- */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        padding: 12px 14px;
+    }
+
+    h2 {
+
+        visibility: hidden;
+    }
+
+    #headerLinks {
+        flex: 0 0 100%;
+        justify-content: center;
+        gap: 8px;
+        position: relative;
+        right: 8ch;
+    }
+
+    #home,
+    .NavigationBar {
+        width: 68px;
+        height: 25px;
+        font-size: 14px;
+        padding-top: 7px;
+    }
+
+    #homeSec {
+        padding: 150px 20px 60px;
+    }
+
+    #picHome {
+        visibility: hidden;
+    }
+
+    .helloTxt {
+        font-size: 24px;
+        position: relative;
+        left: 2.8ch;
+    }
+
+    .nameTxt {
+        font-size: 42px;
+        position: relative;
+        left: 1.7ch;
+
+    }
+
+    .imTxt {
+        font-size: 28px;
+        line-height: 1.35;
+        position: relative;
+        left: 2.4ch;
+    }
+
+    #bioTxt {
+        font-size: 16px;
+        width: min(100%, 520px);
+        position: relative;
+        left: 3ch;
+    }
+
+    #image {
+        width: 270px;
+        height: 270px;
+        position: relative;
+        left: 3.6ch;
+    }
+
+    .iconsBox {
+        width: 100%;
+        gap: 14px;
+        flex-wrap: wrap;
+        position: relative;
+        left: 3ch;
+        top: 1ch;
+    }
+
+    .iconDiv {
+        width: 50px;
+        height: 50px;
+    }
+    #cvBtn{
+        position: relative;
+        left: 3.5ch;
+        top: 1.5ch;
+    }
+
+    .boxIcon {
+        width: 42px;
+        height: 50px;
+    }
+
+    #homeSec{
+        margin-bottom: 8ch;
+    }
+    #aboutSec{
+        margin-bottom: 1ch;
+    }
+
+    #aboutSec,
+    #mainSkill,
+    #projects,
+    #contact-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #aboutMe{
+        position: relative;
+        left: 1.5ch;
+        top: 3ch;
+
+    }
+
+    #aboutMeNavBar {
+        gap: 10px;
+        justify-content: center;
+        position:relative;
+        left: 2.4ch;
+        top: 5ch;
+    }
+
+    #skillDetailsDiv{
+        position: relative;
+        left: 2ch;
+        top: 5ch;
+    }
+
+    #ExperienceDetailDiv{
+        position: relative;
+        left: 2ch;
+        top: 5ch;
+    }
+    #educationPicDetail{
+        position: relative;
+        left: 0ch;
+        top: 3ch;
+        line-height: 30px;
+    }
+    .aboutMeBtn {
+        font-size: 19px;
+    }
+
+    .skill3TxtDiv {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        position: relative;
+        top: 2ch;
+    }
+
+    .skill3Txt {
+        width: 100%;
+    }
+
+    .skillPara {
+        font-size: 40px;
+        margin: 8px 0 18px;
+    }
+
+    .skillShort {
+        font-size: 19px;
+        bottom: 20px;
+    }
+
+    .education-card {
+        padding: 20px;
+    }
+
+    .edu-item h3 {
+        font-size: 21px;
+    }
+
+    .edu-item p {
+        font-size: 16px;
+    }
+
+    #skillText {
+        font-size: 32px;
+    }
+
+    .skillsBox {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 22px;
+    }
+
+    .skill-card {
+        width: 110px;
+        height: 110px;
+    }
+
+    .skill-card img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .skill-card p {
+        font-size: 15px;
+    }
+
+    .render-logo {
+        width: 54px;
+        height: 54px;
+        font-size: 36px;
+    }
+
+    #feature-project-text {
+        font-size: 31px;
+    }
+    .project-text-div{
+        position: relative;
+        top: 4ch;
+        left: 2ch;
+    }
+
+    #project-text-detail br,
+    #bioTxt br {
+        display: none;
+    }
+
+    .projects-folder-wrapper {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        position: relative;
+        bottom: 5ch;
+        left: 2ch;
+    }
+
+    .project-folder {
+        min-height: auto;
+    }
+
+    .project-image-box {
+        height: 180px;
+    }
+
+    .contact-text {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .contact-bio {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none;
+    }
+
+    .splash-content {
+        width: 94%;
+        padding: 20px;
+    }
+
+    .splash-label {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .splash-title {
+        font-size: clamp(58px, 18vw, 110px);
+        letter-spacing: 4px;
+    }
+
+    .splash-title span {
+        font-size: clamp(34px, 10vw, 58px);
+        letter-spacing: 4px;
+    }
+
+    .splash-description {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .bridge-hanging-card {
+        width: 120px;
+        height: 92px;
+    }
+
+    .card-one {
+        left: 8%;
+    }
+
+    .card-three {
+        right: 8%;
+    }
+    #mainSkillDiv{
+        position: relative;
+        left: 2.3ch;
+    }
+    .skillsBox{
+        position: relative;
+        left: -0.5ch;
+    }
+    .contact-me{
+        width: 100%;
+    }
+    #contact-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+    }
+}
+
+/* ---------- Medium phones ---------- */
+@media (max-width: 575px) {
+    
+    header {
+        padding: 10px 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #headerLinks {
+        gap: 6px;
+    }
+
+    #home,
+    .NavigationBar {
+        width: 62px;
+        height: 23px;
+        font-size: 13px;
+        padding-top: 6px;
+        border-width: 1px;
+    }
+
+    #homeSec {
+        padding: 142px 16px 55px;
+    }
+
+    .helloTxt {
+        font-size: 22px;
+    }
+
+    .nameTxt {
+        font-size: 36px;
+    }
+
+    .imTxt {
+        font-size: 24px;
+    }
+
+    #bioTxt {
+        font-size: 15px;
+    }
+
+    #image {
+        width: 235px;
+        height: 235px;
+    }
+
+    #cvBtn {
+        width: 140px;
+        height: 46px;
+        font-size: 18px;
+    }
+
+    #aboutSec,
+    #mainSkill,
+    #projects,
+    #contact-section {
+        padding: 80px 16px 60px;
+    }
+
+    #aboutMeNavBar {
+        flex-wrap: wrap;
+    }
+
+    .tab-content-box,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv,
+    .education-card {
+        padding-top: 12px;
+    }
+
+    .skill-item {
+        padding: 13px;
+        align-items: flex-start;
+    }
+
+    .skill-item p,
+    .exp-card p {
+        font-size: 15px;
+    }
+
+    .exp-card {
+        height: auto;
+        min-height: 110px;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .exp-header h4 {
+        font-size: 20px;
+    }
+
+    .skillsBox {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        padding: 18px;
+        border-radius: 24px;
+    }
+
+    .skill-card {
+        width: 116px;
+        height: 116px;
+    }
+
+    #skillTextBio {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    #feature-project-text {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    #project-text-detail {
+        font-size: 15px;
+    }
+
+    .projects-folder-wrapper {
+        padding: 16px;
+        border-radius: 24px;
+    }
+
+    .project-folder {
+        padding: 18px;
+        border-radius: 22px !important;
+    }
+
+    .project-image-box {
+        height: 155px;
+    }
+
+    .project-content h3 {
+        font-size: 22px;
+    }
+
+    .project-content p {
+        font-size: 14px;
+    }
+
+    .project-links {
+        gap: 10px;
+    }
+
+    .project-links a {
+        height: 36px;
+        font-size: 14px !important;
+    }
+
+    .contact-text {
+        font-size: 26px;
+    }
+
+    .contact-input-text,
+    .contact-input-email,
+    .text-description {
+        font-size: 16px;
+    }
+
+    .contact-me-div {
+        border-radius: 24px;
+    }
+
+    .contact-me {
+        font-size: 24px;
+    }
+
+    .contact-icons {
+        flex-wrap: wrap;
+    }
+
+    .splash-buttons {
+        gap: 12px;
+    }
+
+    .splash-primary-btn,
+    .splash-secondary-btn {
+        min-width: 155px;
+        height: 48px;
+        font-size: 15px;
+    }
+
+    .bridge-hanging-card {
+        display: none;
+    }
+    .skillsBox{
+        position: relative;
+        left: 3ch;
+    }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 420px) {
+
+    #contact-section{
+        min-height: 100%;
+    }
+    .submitt-contact{
+        width: 10ch;
+        height: 4ch;
+    }
+    .contact-text-div{
+        position: relative;
+        left: 2.3ch;
+    }
+    .contact-input-text{
+        position: relative;
+        left: 2ch;
+    }
+    .readMoreSkill{
+        position: relative;
+        top: 1ch;
+        left: 2ch;
+    }
+    .contact-input-email{
+        position: relative;
+        left: 2ch;
+    }
+    .skill3TxtDiv{
+        position: relative;
+        left: 3ch;
+    }
+    
+    .text-description{
+        position: relative;
+        left: 2ch;
+    }
+    #home,
+    .NavigationBar {
+        width: 58px;
+        font-size: 12px;
+    }
+
+    #homeSec {
+        padding-top: 150px;
+    }
+
+    .nameTxt {
+        font-size: 32px;
+    }
+
+    .imTxt {
+        font-size: 21px;
+    }
+
+    #bioTxt {
+        font-size: 14px;
+    }
+
+    #image {
+        width: 210px;
+        height: 210px;
+    }
+
+    .iconsBox {
+        gap: 10px;
+    }
+
+    .iconDiv {
+        width: 46px;
+        height: 46px;
+    }
+
+    .boxIcon {
+        width: 39px;
+        height: 46px;
+    }
+
+    .aboutMeBtn {
+        font-size: 17px;
+    }
+
+    #skillBtn {
+        width: 60px;
+    }
+
+    #ExperienceBtn {
+        width: 95px;
+    }
+
+    #EducationBtn {
+        width: 90px;
+    }
+
+    .skill-card {
+        width: 100px;
+        height: 100px;
+        border-radius: 18px;
+    }
+
+    .skill-card img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .skill-card p {
+        font-size: 14px;
+    }
+
+    .project-image-box {
+        height: 135px;
+    }
+
+    .project-tags span {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-links a {
+        width: 100%;
+    }
+
+    .text-description {
+        height: 190px;
+    }
+
+    .splash-title {
+        font-size: clamp(48px, 18vw, 80px);
+    }
+
+    .splash-title span {
+        font-size: clamp(28px, 10vw, 45px);
+    }
+
+    .splash-description {
+        font-size: 14px;
+    }
+    .contact-me{
+        visibility: visible;
+    }
+    .contact-me-div{
+        visibility: visible;
+    }
+    
+}
+
+/* ---------- Extra small phones ---------- */
+@media (max-width: 360px) {
+    
+    #home,
+    .NavigationBar {
+        width: 54px;
+        font-size: 11px;
+    }
+
+    .nameTxt {
+        font-size: 29px;
+    }
+
+    .imTxt {
+        font-size: 19px;
+    }
+
+    #image {
+        width: 190px;
+        height: 190px;
+    }
+
+    .skill-card {
+        width: 92px;
+        height: 92px;
+    }
+
+    .skill-card img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .skill-card p {
+        font-size: 13px;
+    }
+    
+}
+
+/* ---------- Short-height landscape phones/tablets ---------- */
+@media (max-height: 520px) and (orientation: landscape) {
+    #splashHero {
+        overflow-y: auto;
+    }
+
+    .splash-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none;
+    }
+
+    #homeSec {
+        padding-top: 110px;
+    }
+
+    #image {
+        width: 190px;
+        height: 190px;
+    }
+}
+
+/* =========================================================
+   SPLASH HERO RESPONSIVE FIX
+   Paste this at the VERY END of style.css
+   Matches your existing breakpoints:
+   1700 / 1440 / 1200 / 992 / 768 / 575 / 420 / 360
+   ========================================================= */
+
+/* ---------- Splash base safety override ---------- */
+#splashHero {
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    inset: 0 !important;
+    overflow: hidden !important;
+}
+
+#splashHero .splash-content {
+    width: min(980px, 92vw) !important;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.splash-title {
+    font-size: clamp(90px, 15vw, 220px) !important;
+}
+
+.splash-title span {
+    font-size: clamp(46px, 7vw, 105px) !important;
+}
+
+
+/* ---------- Very large screens ---------- */
+
+
+/* ---------- Normal laptops / smaller desktop screens ---------- */
+@media (max-width: 1440px) {
+    #splashHero {
+        width: 115.5vw !important;
+        height: 115.5dvh !important;
+    }
+
+    #splashHero .splash-content {
+        width: min(880px, 88vw) !important;
+    }
+
+    .splash-title {
+        font-size: clamp(95px, 14vw, 185px) !important;
+        letter-spacing: 7px;
+    }
+
+    .splash-title span {
+        font-size: clamp(48px, 6.8vw, 88px) !important;
+    }
+
+    .splash-label {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .splash-description {
+        font-size: 17px;
+        width: min(640px, 88vw);
+    }
+
+    .splash-stack-left {
+        left: 32px;
+    }
+
+    .splash-stack-right {
+        right: 32px;
+    }
+
+    .splash-command {
+        left: 32px;
+        bottom: 34px;
+    }
+
+    .splash-scroll {
+        right: 32px;
+        bottom: 40px;
+    }
+
+    .splash-tech-card {
+        transform: scale(0.92) rotate(var(--rotate));
+    }
+
+    .card-html {
+        left: 9%;
+        top: 31%;
+    }
+
+    .card-css {
+        left: 21%;
+        top: 38%;
+    }
+
+    .card-js {
+        left: 15%;
+        top: 58%;
+    }
+
+    .card-node {
+        right: 21%;
+        top: 16%;
+    }
+
+    .card-express {
+        right: 11%;
+        top: 34%;
+    }
+
+    .card-mongo {
+        right: 18%;
+        top: 60%;
+    }
+
+    .card-github {
+        right: 6%;
+        top: 61%;
+    }
+}
+
+
+
+/* ---------- Small laptops ---------- */
+@media (max-width: 1200px) {
+    #splashHero {
+        width: 139vw !important;
+        height: 139vh !important;
+        min-height: 127dvh !important;
+    }
+   
+    .splash-title {
+        font-size: clamp(82px, 13vw, 145px) !important;
+        letter-spacing: 5px;
+    }
+
+    .splash-title span {
+        font-size: clamp(42px, 6.5vw, 72px) !important;
+        letter-spacing: 5px;
+    }
+
+    .splash-description {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .splash-stack {
+        gap: 10px;
+    }
+
+    .splash-stack span {
+        font-size: 12px;
+        padding: 9px 14px;
+    }
+
+    .splash-stack-left {
+        left: 22px;
+        top: 36%;
+    }
+
+    .splash-stack-right {
+        right: 22px;
+        top: 36%;
+    }
+
+    .splash-tech-card {
+        transform: scale(0.82) rotate(var(--rotate));
+    }
+
+    .card-html {
+        left: 6%;
+        top: 32%;
+    }
+
+    .card-css {
+        left: 17%;
+        top: 40%;
+    }
+
+    .card-js {
+        left: 10%;
+        top: 59%;
+    }
+
+    .card-node {
+        right: 17%;
+        top: 17%;
+    }
+
+    .card-express {
+        right: 7%;
+        top: 36%;
+    }
+
+    .card-mongo {
+        right: 14%;
+        top: 60%;
+    }
+
+    .card-github {
+        right: 4%;
+        top: 63%;
+    }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+    #splashHero {
+        width: 100vw !important;
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+    }
+
+    #splashHero .splash-content {
+        width: min(720px, 90vw) !important;
+        padding: 24px;
+    }
+
+    .splash-title {
+        font-size: clamp(76px, 16vw, 135px) !important;
+        letter-spacing: 4px;
+    }
+
+    .splash-title span {
+        font-size: clamp(38px, 8vw, 68px) !important;
+        letter-spacing: 4px;
+    }
+
+    .splash-label {
+        font-size: 14px;
+        letter-spacing: 2.5px;
+    }
+
+    .splash-description {
+        width: min(600px, 88vw);
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .splash-stack {
+        display: none !important;
+    }
+
+    .splash-command {
+        left: 24px;
+        bottom: 26px;
+        padding: 11px 14px;
+    }
+
+    .splash-command p {
+        font-size: 12px;
+    }
+
+    .splash-scroll {
+        right: 24px;
+        bottom: 31px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .splash-tech-card {
+        transform: scale(0.72) rotate(var(--rotate));
+    }
+
+    .card-html {
+        left: 5%;
+        top: 22%;
+    }
+
+    .card-css {
+        left: 13%;
+        top: 67%;
+    }
+
+    .card-js {
+        left: 27%;
+        top: 76%;
+    }
+
+    .card-node {
+        right: 22%;
+        top: 12%;
+    }
+
+    .card-express {
+        right: 4%;
+        top: 25%;
+    }
+
+    .card-mongo {
+        right: 12%;
+        top: 70%;
+    }
+
+    .card-github {
+        right: 4%;
+        top: 56%;
+    }
+}
+
+/* ---------- Phones and small tablets ---------- */
+@media (max-width: 768px) {
+    #splashHero {
+        width: 100vw !important;
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #splashHero .splash-content {
+        width: 94vw !important;
+        padding: 18px;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    .splash-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 14px;
+    }
+
+    .splash-title {
+        font-size: clamp(62px, 17vw, 105px) !important;
+        line-height: 0.88;
+        letter-spacing: 3px;
+        -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.88);
+    }
+
+    .splash-title span {
+        font-size: clamp(34px, 9vw, 56px) !important;
+        letter-spacing: 3px;
+    }
+
+    .splash-description {
+        width: 92%;
+        margin-top: 22px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .splash-buttons {
+        margin-top: 30px;
+        gap: 12px;
+    }
+
+    .splash-primary-btn,
+    .splash-secondary-btn {
+        min-width: 150px;
+        height: 46px;
+        font-size: 15px;
+    }
+
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none !important;
+    }
+
+    .splash-light {
+        width: 300px;
+        height: 300px;
+        filter: blur(75px);
+    }
+
+    .bridge-hanging-card {
+        width: 115px;
+        height: 88px;
+    }
+
+    .card-one {
+        left: 7%;
+    }
+
+    .card-three {
+        right: 7%;
+    }
+
+    .bridge-text {
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+}
+
+/* ---------- Medium phones ---------- */
+@media (max-width: 575px) {
+    #splashHero .splash-content {
+        width: 95vw !important;
+        padding: 16px;
+    }
+
+    .splash-label {
+        font-size: 11px;
+        letter-spacing: 1.6px;
+        line-height: 1.5;
+    }
+
+    .splash-title {
+        font-size: clamp(52px, 18vw, 82px) !important;
+        letter-spacing: 2px;
+    }
+
+    .splash-title span {
+        font-size: clamp(30px, 10vw, 46px) !important;
+        letter-spacing: 2px;
+    }
+
+    .splash-description {
+        font-size: 14px;
+        line-height: 1.55;
+        margin-top: 18px;
+    }
+
+    .splash-buttons {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 26px;
+    }
+
+    .splash-primary-btn,
+    .splash-secondary-btn {
+        width: min(245px, 82vw);
+        min-width: 0;
+        height: 46px;
+    }
+
+    .bridge-hanging-card {
+        display: none !important;
+    }
+
+    .bridge-line {
+        top: 50%;
+    }
+
+    .bridge-text {
+        bottom: 24%;
+    }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 420px) {
+    #splashHero .splash-content {
+        width: 96vw !important;
+        padding: 14px;
+    }
+
+    .splash-label {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .splash-title {
+        font-size: clamp(46px, 18vw, 70px) !important;
+        letter-spacing: 1.5px;
+    }
+
+    .splash-title span {
+        font-size: clamp(26px, 10vw, 39px) !important;
+        letter-spacing: 1.5px;
+    }
+
+    .splash-description {
+        width: 94%;
+        font-size: 13.5px;
+        line-height: 1.5;
+    }
+
+    .splash-primary-btn,
+    .splash-secondary-btn {
+        width: min(225px, 84vw);
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .splash-light {
+        width: 230px;
+        height: 230px;
+        filter: blur(65px);
+    }
+}
+
+/* ---------- Extra small phones ---------- */
+@media (max-width: 360px) {
+    .splash-title {
+        font-size: clamp(40px, 17vw, 60px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(24px, 9vw, 34px) !important;
+    }
+
+    .splash-description {
+        font-size: 13px;
+    }
+
+    .splash-primary-btn,
+    .splash-secondary-btn {
+        width: min(205px, 86vw);
+        height: 42px;
+        font-size: 13px;
+    }
+}
+
+/* ---------- Short-height landscape phones/tablets ---------- */
+@media (max-height: 520px) and (orientation: landscape) {
+    #splashHero {
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        overflow-y: auto !important;
+    }
+
+    #splashHero .splash-content {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .splash-label {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .splash-title {
+        font-size: clamp(46px, 12vw, 86px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(25px, 6vw, 42px) !important;
+    }
+
+    .splash-description {
+        margin-top: 14px;
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .splash-buttons {
+        margin-top: 18px;
+    }
+
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   FINAL SPLASH HERO CENTER + FULL SCREEN FIX
+   Paste this at the VERY END of style.css
+   This fixes right-side space and centers all splash content
+   ========================================================= */
+
+/* ---------- Full screen lock ---------- */
+#splashHero {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: auto !important;
+    max-width: none !important;
+
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    z-index: 99999 !important;
+}
+
+/* Prevent any child from creating horizontal overflow */
+#splashHero *,
+#splashHero *::before,
+#splashHero *::after {
+    box-sizing: border-box !important;
+}
+
+/* ---------- Main center content ---------- */
+#splashHero .splash-content {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    width: min(900px, 92vw) !important;
+    max-width: 92vw !important;
+
+    margin: 0 !important;
+    padding: 0 16px !important;
+
+    text-align: center !important;
+    z-index: 20 !important;
+}
+
+/* ---------- Text scaling ---------- */
+.splash-title {
+    font-size: clamp(70px, 13vw, 210px) !important;
+    line-height: 0.86 !important;
+    letter-spacing: clamp(2px, 0.55vw, 9px) !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.splash-title span {
+    display: block !important;
+    font-size: clamp(38px, 6.7vw, 105px) !important;
+    line-height: 1 !important;
+    letter-spacing: clamp(2px, 0.45vw, 7px) !important;
+    text-align: center !important;
+}
+
+.splash-label {
+    text-align: center !important;
+    font-size: clamp(11px, 1.2vw, 17px) !important;
+    letter-spacing: clamp(1.2px, 0.35vw, 4px) !important;
+    max-width: 100% !important;
+}
+
+.splash-description {
+    width: min(650px, 88vw) !important;
+    max-width: 88vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    font-size: clamp(14px, 1.25vw, 18px) !important;
+    line-height: 1.65 !important;
+}
+
+/* ---------- Buttons center ---------- */
+.splash-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    width: 100% !important;
+}
+
+.splash-primary-btn,
+.splash-secondary-btn {
+    box-sizing: border-box !important;
+}
+
+/* ---------- Background layers must cover full hero ---------- */
+.splash-noise,
+.splash-grid,
+.splash-hanging-cards {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+/* ---------- Corner/side elements inside screen ---------- */
+.splash-command {
+    left: clamp(16px, 3vw, 55px) !important;
+    bottom: clamp(18px, 4vh, 45px) !important;
+}
+
+.splash-scroll {
+    right: clamp(16px, 3vw, 55px) !important;
+    bottom: clamp(22px, 4vh, 50px) !important;
+}
+
+.splash-stack-left {
+    left: clamp(18px, 4vw, 70px) !important;
+}
+
+.splash-stack-right {
+    right: clamp(18px, 4vw, 70px) !important;
+}
+
+/* =========================================================
+   BREAKPOINTS
+   ========================================================= */
+
+/* ---------- Big screens ---------- */
+@media (min-width: 1700px) {
+    #splashHero {
+        width: auto !important;
+        height: 500ch !important;
+        min-height: 100dvh !important;
+    }
+/* 
+    #splashHero .splash-content {
+        width: min(1100px, 88vw) !important;
+        max-width: 88vw !important;
+    } */
+
+    .splash-title {
+        font-size: clamp(180px, 12vw, 250px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(85px, 5.8vw, 120px) !important;
+    }
+}
+
+/* ---------- Laptops ---------- */
+@media (max-width: 1440px) {
+    #splashHero {
+        width: auto !important;
+        height: 100% !important;
+        min-height: 100dvh !important;
+    }
+
+    #splashHero .splash-content {
+        width: min(820px, 90vw) !important;
+        max-width: 90vw !important;
+    }
+
+    .splash-title {
+        font-size: clamp(90px, 13vw, 175px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(46px, 6.5vw, 86px) !important;
+    }
+
+    .splash-tech-card {
+        transform: scale(0.9) rotate(var(--rotate)) !important;
+    }
+}
+
+/* ---------- Small laptops ---------- */
+@media (max-width: 1200px) {
+    #splashHero {
+        width: auto !important;
+        height: 100%  !important;
+        min-height: 100dvh !important;
+    }
+
+    #splashHero .splash-content {
+        width: min(760px, 90vw) !important;
+        max-width: 90vw !important;
+    }
+
+    .splash-title {
+        font-size: clamp(82px, 13vw, 145px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(42px, 6.5vw, 72px) !important;
+    }
+
+    .splash-tech-card {
+        transform: scale(0.78) rotate(var(--rotate)) !important;
+    }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+    #splashHero {
+        width: auto !important;
+        height: 100% !important;
+        min-height: 100dvh !important;
+    }
+
+    #splashHero .splash-content {
+        width: min(700px, 92vw) !important;
+        max-width: 92vw !important;
+    }
+
+    .splash-title {
+        font-size: clamp(72px, 15vw, 125px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(38px, 8vw, 64px) !important;
+    }
+
+    .splash-description {
+        width: min(570px, 88vw) !important;
+    }
+
+    .splash-stack {
+        display: none !important;
+    }
+
+    .splash-tech-card {
+        transform: scale(0.68) rotate(var(--rotate)) !important;
+    }
+
+    .card-html {
+        left: 3% !important;
+        top: 18% !important;
+    }
+
+    .card-css {
+        left: 8% !important;
+        top: 66% !important;
+    }
+
+    .card-js {
+        left: 28% !important;
+        top: 76% !important;
+    }
+
+    .card-node {
+        right: 24% !important;
+        top: 11% !important;
+    }
+
+    .card-express {
+        right: 2% !important;
+        top: 24% !important;
+    }
+
+    .card-mongo {
+        right: 12% !important;
+        top: 70% !important;
+    }
+
+    .card-github {
+        right: 2% !important;
+        top: 55% !important;
+    }
+}
+
+/* ---------- Mobiles ---------- */
+@media (max-width: 768px) {
+    #splashHero {
+        width: auto !important;
+        height: 100% !important;
+        min-height: 100dvh !important;
+    }
+
+    #splashHero .splash-content {
+        width: 94vw !important;
+        max-width: 94vw !important;
+        padding: 0 14px !important;
+    }
+
+    .splash-title {
+        font-size: clamp(56px, 17vw, 96px) !important;
+        line-height: 0.9 !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(31px, 9vw, 52px) !important;
+    }
+
+    .splash-description {
+        width: 92% !important;
+        max-width: 92% !important;
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+        margin-top: 20px !important;
+    }
+
+    .splash-buttons {
+        margin-top: 26px !important;
+        gap: 12px !important;
+    }
+
+    .splash-primary-btn,
+    .splash-secondary-btn {
+        min-width: 145px !important;
+        height: 45px !important;
+        font-size: 14px !important;
+    }
+
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none !important;
+    }
+}
+
+/* ---------- Medium phones ---------- */
+@media (max-width: 575px) {
+    #splashHero .splash-content {
+        width: 95vw !important;
+        max-width: 95vw !important;
+    }
+
+    .splash-title {
+        font-size: clamp(48px, 18vw, 78px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(28px, 10vw, 44px) !important;
+    }
+
+    .splash-label {
+        font-size: 10.5px !important;
+        line-height: 1.45 !important;
+    }
+
+    .splash-description {
+        font-size: 14px !important;
+    }
+
+    .splash-buttons {
+        flex-direction: column !important;
+    }
+
+    .splash-primary-btn,
+    .splash-secondary-btn {
+        width: min(240px, 82vw) !important;
+    }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 420px) {
+    #splashHero .splash-content {
+        width: 96vw !important;
+        max-width: 96vw !important;
+    }
+
+    .splash-title {
+        font-size: clamp(43px, 18vw, 68px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(25px, 10vw, 38px) !important;
+    }
+
+    .splash-description {
+        font-size: 13.5px !important;
+        line-height: 1.5 !important;
+    }
+
+    .splash-primary-btn,
+    .splash-secondary-btn {
+        width: min(220px, 84vw) !important;
+        height: 43px !important;
+    }
+}
+
+/* ---------- Very small phones ---------- */
+@media (max-width: 360px) {
+    .splash-title {
+        font-size: clamp(38px, 17vw, 58px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(23px, 9vw, 33px) !important;
+    }
+
+    .splash-description {
+        font-size: 13px !important;
+    }
+
+    .splash-primary-btn,
+    .splash-secondary-btn {
+        width: min(205px, 86vw) !important;
+        height: 41px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* ---------- Landscape small-height screens ---------- */
+@media (max-height: 520px) and (orientation: landscape) {
+    #splashHero {
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+    }
+
+    #splashHero .splash-content {
+        width: 90vw !important;
+        max-width: 90vw !important;
+    }
+
+    .splash-title {
+        font-size: clamp(44px, 11vw, 84px) !important;
+    }
+
+    .splash-title span {
+        font-size: clamp(24px, 5.8vw, 42px) !important;
+    }
+
+    .splash-description {
+        margin-top: 12px !important;
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+
+    .splash-buttons {
+        margin-top: 16px !important;
+    }
+
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL REAL-DEVICE RESPONSIVE PATCH
+   Paste at the VERY END of style.css
+   ========================================================= */
+
+/* ---------- All devices safety layer ---------- */
+@media screen and (min-width: 0px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    main,
+    section,
+    header {
+        max-width: 100%;
+    }
+
+    #splashHero {
+        width: 100vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        min-height: 100vh !important;
+        min-height: 100dvh !important;
+        inset: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        overflow: hidden !important;
+    }
+
+    #mainSkill {
+        width: 100%;
+        padding-left: clamp(14px, 4vw, 60px);
+        padding-right: clamp(14px, 4vw, 60px);
+        overflow-x: hidden;
+    }
+
+    #mainSkillDiv {
+        width: min(100ch, 100%) !important;
+        max-width: 100%;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        margin: 0 auto 32px auto !important;
+        text-align: center;
+    }
+
+    .skillsBox {
+        width: min(86rem, calc(100vw - 32px)) !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+
+        display: grid !important;
+        justify-content: center !important;
+        justify-items: center !important;
+        align-items: center !important;
+
+        overflow: visible !important;
+    }
+
+    .skill-card {
+        flex-shrink: 0;
+    }
+
+    #projects,
+    .projects-section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .project-text-div,
+    #feature-project-text,
+    #project-text-detail {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .projects-folder-wrapper {
+        width: min(86rem, calc(100vw - 32px)) !important;
+        max-width: 100% !important;
+        height: auto !important;
+
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        overflow-x: hidden !important;
+        box-sizing: border-box;
+    }
+
+    #contact-section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        text-align: center;
+        padding-left: clamp(14px, 4vw, 60px);
+        padding-right: clamp(14px, 4vw, 60px);
+    }
+
+    .contact-text-div,
+    .contact-input-text,
+    .contact-input-email,
+    .text-description,
+    .submitt-contact,
+    .contact-me-div {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+    }
+
+    .text-description,
+    .contact-input-text,
+    .contact-input-email {
+        box-sizing: border-box;
+    }
+}
+
+/* ---------- 1536px and above: big laptops / desktops ---------- */
+@media screen and (min-width: 1536px) {
+    #headerLinks {
+        left: auto !important;
+        right: 7vw !important;
+    }
+
+    h2 {
+        left: 7vw !important;
+    }
+
+    .skillsBox {
+        width: min(86rem, calc(100vw - 180px)) !important;
+        grid-template-columns: repeat(9, 120px) !important;
+        gap: 22px !important;
+        padding: 35px !important;
+    }
+
+    .skill-card {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .projects-folder-wrapper {
+        width: min(86rem, calc(100vw - 180px)) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 34px !important;
+    }
+
+    .contact-input-text,
+    .contact-input-email {
+        width: min(40ch, 38vw) !important;
+        display: inline-block !important;
+        margin: 30px 16px 0 !important;
+    }
+
+    .text-description {
+        width: min(100ch, calc(100vw - 220px)) !important;
+        display: block !important;
+        margin: 34px auto 0 !important;
+    }
+
+    .submitt-contact {
+        display: block !important;
+        margin: 34px auto 0 !important;
+    }
+
+    .contact-me-div {
+        width: min(60ch, calc(100vw - 220px)) !important;
+        margin: 34px auto 0 !important;
+    }
+}
+
+/* ---------- 1201px to 1535px: normal laptops ---------- */
+@media screen and (min-width: 1201px) and (max-width: 1535px) {
+    h2 {
+        left: 45px !important;
+    }
+
+    #headerLinks {
+        left: auto !important;
+        right: 35px !important;
+        width: 560px !important;
+    }
+
+    .skillsBox {
+        width: min(1120px, calc(100vw - 90px)) !important;
+        grid-template-columns: repeat(7, 120px) !important;
+        gap: 20px !important;
+        padding: 30px !important;
+    }
+
+    .skill-card {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .projects-folder-wrapper {
+        width: min(1120px, calc(100vw - 90px)) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+    }
+
+    .project-folder {
+        min-height: 370px;
+    }
+
+    .contact-input-text,
+    .contact-input-email {
+        width: min(38ch, 38vw) !important;
+        display: inline-block !important;
+        margin: 26px 12px 0 !important;
+    }
+
+    .text-description {
+        width: min(88ch, calc(100vw - 120px)) !important;
+        display: block !important;
+        margin: 30px auto 0 !important;
+    }
+
+    .submitt-contact {
+        display: block !important;
+        margin: 30px auto 0 !important;
+    }
+
+    .contact-me-div {
+        width: min(56ch, calc(100vw - 120px)) !important;
+        margin: 34px auto 0 !important;
+    }
+    #bioTxt {
+        top: 49ch !important;
+    }
+}
+
+/* ---------- 993px to 1200px: small laptops ---------- */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    header {
+        padding: 12px 28px !important;
+    }
+
+    h2 {
+        position: relative !important;
+        left: auto !important;
+    }
+
+    #headerLinks {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        margin-left: auto;
+        width: auto !important;
+        gap: 10px;
+    }
+
+    .skillPicsDiv,
+    .skillPicTxtDiv,
+    #dotLine {
+        display: none !important;
+    }
+
+    #aboutMe,
+    #aboutMeNavBar,
+    .tab-content-box,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv,
+    .education-card,
+    .skill3TxtDiv,
+    .readMoreSkill {
+        left: auto !important;
+        right: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .skillsBox {
+        width: min(980px, calc(100vw - 70px)) !important;
+        grid-template-columns: repeat(6, 112px) !important;
+        gap: 18px !important;
+        padding: 28px !important;
+    }
+
+    .skill-card {
+        width: 112px !important;
+        height: 112px !important;
+    }
+
+    .projects-folder-wrapper {
+        width: min(980px, calc(100vw - 70px)) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px !important;
+        padding: 26px !important;
+    }
+
+    .contact-input-text,
+    .contact-input-email {
+        width: min(36ch, 42vw) !important;
+        display: inline-block !important;
+        margin: 24px 10px 0 !important;
+    }
+
+    .text-description {
+        width: min(78ch, calc(100vw - 90px)) !important;
+        display: block !important;
+        margin: 28px auto 0 !important;
+    }
+
+    .submitt-contact {
+        display: block !important;
+        margin: 28px auto 0 !important;
+    }
+
+    .contact-me-div {
+        width: min(54ch, calc(100vw - 90px)) !important;
+        margin: 32px auto 0 !important;
+    }
+}
+
+/* ---------- 769px to 992px: tablets ---------- */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    header {
+        height: auto !important;
+        min-height: 78px;
+        padding: 12px 22px !important;
+        justify-content: space-between;
+        gap: 14px;
+    }
+
+    h2 {
+        position: relative !important;
+        left: auto !important;
+    }
+
+    #headerLinks {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        width: auto !important;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 9px;
+    }
+
+    #picHome,
+    .skillPicsDiv,
+    .skillPicTxtDiv,
+    #dotLine {
+        display: none !important;
+    }
+
+    #homeSec {
+        min-height: auto !important;
+        padding: 130px 24px 70px !important;
+        text-align: center;
+    }
+
+    .helloTxt,
+    .nameTxt,
+    .imTxt,
+    #bioTxt,
+    .iconsBox,
+    #cvBtn,
+    #image {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+        text-align: center;
+    }
+
+    .iconsBox {
+        justify-content: center;
+        gap: 18px;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    #cvBtn {
+        margin-top: 24px;
+    }
+
+    #image {
+        width: 280px !important;
+        height: 280px !important;
+        margin-top: 30px;
+    }
+
+    #aboutMe,
+    #aboutMeNavBar,
+    .tab-content-box,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv,
+    .education-card,
+    .skill3TxtDiv,
+    .readMoreSkill {
+        left: auto !important;
+        right: auto !important;
+        width: min(760px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #aboutMe {
+        display: block;
+        text-align: center;
+    }
+
+    #aboutMeNavBar {
+        justify-content: center;
+    }
+
+    .skillsBox {
+        width: min(760px, calc(100vw - 44px)) !important;
+        grid-template-columns: repeat(4, 110px) !important;
+        gap: 18px !important;
+        padding: 24px !important;
+    }
+
+    .skill-card {
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    .projects-folder-wrapper {
+        width: min(760px, calc(100vw - 44px)) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 22px !important;
+        padding: 24px !important;
+    }
+
+    .contact-input-text,
+    .contact-input-email,
+    .text-description,
+    .submitt-contact,
+    .contact-me-div {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .contact-input-text,
+    .contact-input-email {
+        width: min(560px, 100%) !important;
+        margin-top: 20px !important;
+    }
+
+    .text-description {
+        width: min(680px, 100%) !important;
+        margin-top: 22px !important;
+    }
+
+    .submitt-contact {
+        margin-top: 24px !important;
+    }
+
+    .contact-me-div {
+        width: min(560px, 100%) !important;
+        margin-top: 30px !important;
+    }
+}
+
+/* ---------- 576px to 768px: large phones / small tablets ---------- */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    header {
+        height: auto !important;
+        min-height: 110px;
+        padding: 14px 18px !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    h2 {
+        position: static !important;
+        text-align: center;
+    }
+
+    #headerLinks {
+        position: static !important;
+        width: 100% !important;
+        max-width: 520px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #picHome,
+    .skillPicsDiv,
+    .skillPicTxtDiv,
+    #dotLine,
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none !important;
+    }
+
+    #homeSec {
+        padding: 145px 20px 65px !important;
+        text-align: center;
+    }
+
+    .helloTxt,
+    .nameTxt,
+    .imTxt,
+    #bioTxt,
+    .iconsBox,
+    #cvBtn,
+    #image {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+        display: block;
+    }
+
+    .nameTxt {
+        font-size: 42px !important;
+    }
+
+    .imTxt {
+        font-size: 28px !important;
+    }
+
+    #bioTxt br {
+        display: none;
+    }
+
+    .iconsBox {
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 22px;
+    }
+
+    #cvBtn {
+        margin-top: 22px;
+    }
+
+    #image {
+        width: 250px !important;
+        height: 250px !important;
+        margin-top: 28px;
+    }
+
+    #aboutMe {
+        display: block;
+        text-align: center;
+        left: auto !important;
+    }
+
+    #aboutMeNavBar,
+    .tab-content-box,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv,
+    .education-card,
+    .skill3TxtDiv,
+    .readMoreSkill {
+        left: auto !important;
+        right: auto !important;
+        width: min(540px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #aboutMeNavBar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .skill3TxtDiv {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .skillsBox {
+        width: min(540px, calc(100vw - 32px)) !important;
+        grid-template-columns: repeat(4, 105px) !important;
+        gap: 16px !important;
+        padding: 18px !important;
+    }
+
+    .skill-card {
+        width: 105px !important;
+        height: 105px !important;
+    }
+
+    .skill-card img {
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    .skill-card p {
+        font-size: 14px !important;
+    }
+
+    .projects-folder-wrapper {
+        width: min(540px, calc(100vw - 32px)) !important;
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+        padding: 20px !important;
+    }
+
+    .project-image-box {
+        height: 180px !important;
+    }
+
+    .contact-input-text,
+    .contact-input-email,
+    .text-description,
+    .submitt-contact,
+    .contact-me-div {
+        display: block !important;
+        width: min(520px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 20px !important;
+    }
+
+    .submitt-contact {
+        width: 160px !important;
+    }
+
+    .contact-icons {
+        position: static !important;
+        width: 100% !important;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .contact-me {
+        position: static !important;
+        margin: 0 auto 14px !important;
+    }
+}
+
+/* ---------- 421px to 575px: normal phones ---------- */
+@media screen and (min-width: 421px) and (max-width: 575px) {
+    header {
+        height: auto !important;
+        min-height: 105px;
+        padding: 12px 12px !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2 {
+        position: static !important;
+        font-size: 22px !important;
+    }
+
+    #headerLinks {
+        position: static !important;
+        width: 100% !important;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    #home,
+    .NavigationBar {
+        width: 62px !important;
+        height: 24px !important;
+        font-size: 13px !important;
+        padding-top: 6px !important;
+    }
+
+    #picHome,
+    .skillPicsDiv,
+    .skillPicTxtDiv,
+    #dotLine,
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none !important;
+    }
+
+    #homeSec {
+        padding: 145px 16px 60px !important;
+        text-align: center;
+    }
+
+    .helloTxt,
+    .nameTxt,
+    .imTxt,
+    #bioTxt,
+    .iconsBox,
+    #cvBtn,
+    #image {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+        display: block;
+    }
+
+    .nameTxt {
+        font-size: 36px !important;
+    }
+
+    .imTxt {
+        font-size: 24px !important;
+    }
+
+    #bioTxt {
+        font-size: 15px !important;
+        line-height: 1.6;
+    }
+
+    #bioTxt br {
+        display: none;
+    }
+
+    .iconsBox {
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 20px;
+    }
+
+    #cvBtn {
+        margin-top: 20px;
+    }
+
+    #image {
+        width: 230px !important;
+        height: 230px !important;
+        margin-top: 26px;
+    }
+
+    #aboutMe,
+    #aboutMeNavBar,
+    .tab-content-box,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv,
+    .education-card,
+    .skill3TxtDiv,
+    .readMoreSkill {
+        left: auto !important;
+        right: auto !important;
+        width: min(100%, 430px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #aboutMe {
+        display: block;
+        text-align: center;
+    }
+
+    #aboutMeNavBar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .skill3TxtDiv {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .skillsBox {
+        width: min(430px, calc(100vw - 28px)) !important;
+        grid-template-columns: repeat(3, 96px) !important;
+        gap: 14px !important;
+        padding: 16px !important;
+        border-radius: 24px !important;
+    }
+
+    .skill-card {
+        width: 96px !important;
+        height: 96px !important;
+        border-radius: 18px !important;
+    }
+
+    .skill-card img {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .skill-card p {
+        font-size: 13px !important;
+    }
+
+    .projects-folder-wrapper {
+        width: min(430px, calc(100vw - 28px)) !important;
+        grid-template-columns: 1fr !important;
+        padding: 16px !important;
+    }
+
+    .project-folder {
+        min-height: auto !important;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-links a {
+        width: 100% !important;
+    }
+
+    .contact-input-text,
+    .contact-input-email,
+    .text-description,
+    .submitt-contact,
+    .contact-me-div {
+        display: block !important;
+        width: min(430px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 18px !important;
+    }
+
+    .submitt-contact {
+        width: 145px !important;
+    }
+
+    .contact-me {
+        position: static !important;
+        margin: 0 auto 14px !important;
+    }
+
+    .contact-icons {
+        position: static !important;
+        width: 100% !important;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------- 361px to 420px: small phones ---------- */
+@media screen and (min-width: 361px) and (max-width: 420px) {
+    header {
+        height: auto !important;
+        min-height: 106px;
+        padding: 12px 8px !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        position: static !important;
+        font-size: 20px !important;
+    }
+
+    #headerLinks {
+        position: static !important;
+        width: 100% !important;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    #home,
+    .NavigationBar {
+        width: 58px !important;
+        height: 23px !important;
+        font-size: 12px !important;
+        padding-top: 6px !important;
+    }
+
+    #picHome,
+    .skillPicsDiv,
+    .skillPicTxtDiv,
+    #dotLine,
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none !important;
+    }
+
+    #homeSec {
+        padding: 145px 14px 56px !important;
+        text-align: center;
+    }
+
+    .helloTxt,
+    .nameTxt,
+    .imTxt,
+    #bioTxt,
+    .iconsBox,
+    #cvBtn,
+    #image {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+        display: block;
+    }
+
+    .nameTxt {
+        font-size: 32px !important;
+    }
+
+    .imTxt {
+        font-size: 21px !important;
+    }
+
+    #bioTxt {
+        font-size: 14px !important;
+        line-height: 1.55;
+    }
+
+    #bioTxt br {
+        display: none;
+    }
+
+    .iconsBox {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    #cvBtn {
+        width: 140px !important;
+        height: 44px !important;
+        margin-top: 18px;
+    }
+
+    #image {
+        width: 210px !important;
+        height: 210px !important;
+        margin-top: 24px;
+    }
+
+    #aboutMe,
+    #aboutMeNavBar,
+    .tab-content-box,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv,
+    .education-card,
+    .skill3TxtDiv,
+    .readMoreSkill {
+        left: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #aboutMe {
+        display: block;
+        text-align: center;
+    }
+
+    #aboutMeNavBar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .skill3TxtDiv {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .skillsBox {
+        width: min(390px, calc(100vw - 24px)) !important;
+        grid-template-columns: repeat(2, 100px) !important;
+        gap: 12px !important;
+        padding: 14px !important;
+        border-radius: 22px !important;
+    }
+
+    .skill-card {
+        width: 100px !important;
+        height: 100px !important;
+        border-radius: 18px !important;
+    }
+
+    .skill-card img {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .skill-card p {
+        font-size: 14px !important;
+    }
+
+    .projects-folder-wrapper {
+        width: min(390px, calc(100vw - 24px)) !important;
+        grid-template-columns: 1fr !important;
+        padding: 14px !important;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-links a {
+        width: 100% !important;
+    }
+
+    .contact-input-text,
+    .contact-input-email,
+    .text-description,
+    .submitt-contact,
+    .contact-me-div {
+        display: block !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 16px !important;
+    }
+
+    .submitt-contact {
+        width: 130px !important;
+    }
+
+    .contact-me {
+        position: static !important;
+        margin: 0 auto 12px !important;
+    }
+
+    .contact-icons {
+        position: static !important;
+        width: 100% !important;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------- 360px and below: extra small phones ---------- */
+@media screen and (max-width: 360px) {
+    header {
+        height: auto !important;
+        min-height: 106px;
+        padding: 10px 6px !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        position: static !important;
+        font-size: 19px !important;
+    }
+
+    #headerLinks {
+        position: static !important;
+        width: 100% !important;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    #home,
+    .NavigationBar {
+        width: 54px !important;
+        height: 22px !important;
+        font-size: 11px !important;
+        padding-top: 6px !important;
+    }
+
+    #picHome,
+    .skillPicsDiv,
+    .skillPicTxtDiv,
+    #dotLine,
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none !important;
+    }
+
+    #homeSec {
+        padding: 142px 12px 52px !important;
+        text-align: center;
+    }
+
+    .helloTxt,
+    .nameTxt,
+    .imTxt,
+    #bioTxt,
+    .iconsBox,
+    #cvBtn,
+    #image {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+        display: block;
+    }
+
+    .nameTxt {
+        font-size: 29px !important;
+    }
+
+    .imTxt {
+        font-size: 19px !important;
+    }
+
+    #bioTxt {
+        font-size: 13px !important;
+        line-height: 1.5;
+    }
+
+    #bioTxt br {
+        display: none;
+    }
+
+    .iconsBox {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    #cvBtn {
+        width: 130px !important;
+        height: 42px !important;
+        font-size: 16px !important;
+        margin-top: 16px;
+    }
+
+    #image {
+        width: 190px !important;
+        height: 190px !important;
+        margin-top: 22px;
+    }
+
+    #aboutMe,
+    #aboutMeNavBar,
+    .tab-content-box,
+    #skillDetailsDiv,
+    #ExperienceDetailDiv,
+    .education-card,
+    .skill3TxtDiv,
+    .readMoreSkill {
+        left: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #aboutMe {
+        display: block;
+        text-align: center;
+    }
+
+    #aboutMeNavBar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .skillsBox {
+        width: min(330px, calc(100vw - 20px)) !important;
+        grid-template-columns: repeat(2, 92px) !important;
+        gap: 10px !important;
+        padding: 12px !important;
+        border-radius: 20px !important;
+    }
+
+    .skill-card {
+        width: 92px !important;
+        height: 92px !important;
+        border-radius: 16px !important;
+    }
+
+    .skill-card img {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .skill-card p {
+        font-size: 13px !important;
+    }
+
+    .projects-folder-wrapper {
+        width: min(330px, calc(100vw - 20px)) !important;
+        grid-template-columns: 1fr !important;
+        padding: 12px !important;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-links a {
+        width: 100% !important;
+    }
+
+    .contact-input-text,
+    .contact-input-email,
+    .text-description,
+    .submitt-contact,
+    .contact-me-div {
+        display: block !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 15px !important;
+    }
+
+    .submitt-contact {
+        width: 120px !important;
+    }
+
+    .contact-me {
+        position: static !important;
+        margin: 0 auto 12px !important;
+        font-size: 22px !important;
+    }
+
+    .contact-icons {
+        position: static !important;
+        width: 100% !important;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------- Short landscape devices ---------- */
+@media screen and (max-height: 520px) and (orientation: landscape) {
+    #splashHero {
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        overflow-y: auto !important;
+    }
+
+    .splash-hanging-cards,
+    .splash-stack,
+    .splash-command,
+    .splash-scroll {
+        display: none !important;
+    }
+
+    #homeSec {
+        min-height: auto !important;
+        padding-top: 110px !important;
+    }
+
+    #image {
+        width: 190px !important;
+        height: 190px !important;
+    }
+
+    .skillsBox,
+    .projects-folder-wrapper {
+        width: min(92vw, 900px) !important;
+    }
+}
+
+/* =====================================================
+   NAVBAR HEIGHT + BETTER VERTICAL SPACE FIX
+   Paste at the VERY END after all media queries
+   ===================================================== */
+
+/* Desktop / laptop navbar */
+@media screen and (min-width: 993px) {
+    header {
+        height: 96px !important;
+        min-height: 96px !important;
+        padding: 0 6vw !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    h2 {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        margin: 0 !important;
+    }
+
+    #headerLinks {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        margin-left: auto !important;
+
+        width: min(600px, 46vw) !important;
+        height: 44px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 16px !important;
+    }
+
+    #home,
+    .NavigationBar {
+        height: 34px !important;
+        min-height: 34px !important;
+        width: 88px !important;
+
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        line-height: 1 !important;
+    }
+
+    /* Gives your hero content safe space below fixed navbar */
+    #homeSec {
+        padding-top: 130px !important;
+    }
+}
+
+
+/* Medium laptop control */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    header {
+        height: 90px !important;
+        min-height: 90px !important;
+        padding: 0 4vw !important;
+    }
+
+    #headerLinks {
+        width: min(560px, 55vw) !important;
+        gap: 12px !important;
+    }
+
+    #home,
+    .NavigationBar {
+        width: 82px !important;
+        height: 32px !important;
+        font-size: 16px !important;
+    }
+}
+
+
+/* Tablet and mobile already use stacked navbar,
+   only give a little more breathing room */
+@media screen and (max-width: 992px) {
+    header {
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+    }
+
+    #homeSec {
+        padding-top: 155px !important;
+    }
+}
+
+/* =====================================================
+   SOCIAL ICONS MOBILE FIX
+   Keep icons in one straight centered line
+   ===================================================== */
+
+@media screen and (max-width: 992px) {
+    .iconsBox {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 100% !important;
+        max-width: 420px !important;
+
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        margin: 24px auto 0 auto !important;
+        gap: 22px !important;
+    }
+
+    .iconDiv {
+        width: 53px !important;
+        height: 53px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .boxIcon {
+        width: 43px !important;
+        height: 43px !important;
+    }
+}
+
+
+/* Small phones */
+@media screen and (max-width: 420px) {
+    .iconsBox {
+        max-width: 320px !important;
+        gap: 16px !important;
+    }
+}
+
+
+/* Extra small phones */
+@media screen and (max-width: 360px) {
+    .iconsBox {
+        max-width: 290px !important;
+        gap: 10px !important;
+    }
+
+    .iconDiv {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .boxIcon {
+        width: 39px !important;
+        height: 39px !important;
+    }
+}
+
+
+/* =====================================================
+   993px - 1200px HEADER FIX ONLY
+   Do not touch any other layout positioning
+   ===================================================== */
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    header {
+        height: 90px !important;
+        min-height: 90px !important;
+        padding: 0 4vw !important;
+    }
+
+    #headerLinks {
+        width: min(560px, 55vw) !important;
+        gap: 12px !important;
+    }
+
+    #home,
+    .NavigationBar {
+        width: 82px !important;
+        height: 32px !important;
+        font-size: 16px !important;
+    }
+    #image{
+        position: relative;
+        left: 11.5ch;
+        top: 5ch;
+        width: 48ch;
+        height: 48ch;
+    }
+    .helloTxt{
+        position: relative;
+        top: -19ch;
+    }
+    .nameTxt{
+        position: relative;
+        top: -9.5ch;
+    }
+    .iconsBox{
+        position: relative;
+        top: -3ch;
+    }
+    #cvBtn{
+        position: relative;
+        top: 1ch;
+    }
+    #aboutMeNavBar{
+        position: relative !important;
+        left: -42ch !important;
+    }
+    .skill3TxtDiv{
+        position:  relative !important;
+        left: -40ch !important;
+    }
+    .readMoreSkill{
+        position: relative !important;
+        left: -47ch !important;
+    }
+    .skillPicTxtDiv{
+        visibility: visible;
+    }
+    
+    
+}
+
+
+
+/* Tablet and mobile already use stacked navbar,
+   only give a little more breathing room */
+@media screen and (max-width: 992px) {
+    header {
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+    }
+
+    #homeSec {
+        padding-top: 155px !important;
+    }
+}
+
+/* =====================================================
+   ABOUT SECTION CENTER ALIGNMENT
+   993px to 1200px tablet-style layout
+   Paste at the END of style.css
+   ===================================================== */
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+    #aboutSec {
+        position: relative !important;
+        width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+
+        padding: 100px 6vw 80px !important;
+        box-sizing: border-box !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        text-align: center !important;
+        overflow: hidden !important;
+    }
+
+    #aboutMe {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+        margin: 0 0 28px 0 !important;
+
+        text-align: center !important;
+        font-size: 34px !important;
+    }
+
+    #aboutMeNavBar {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: min(520px, 90%) !important;
+        margin: 0 auto 28px auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 30px !important;
+
+        text-align: center !important;
+    }
+
+    .aboutMeBtn {
+        font-size: 22px !important;
+        text-align: center !important;
+    }
+
+    #skillDetailsDiv,
+    #ExperienceDetailDiv,
+    .education-card {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: min(720px, 90%) !important;
+        max-width: 720px !important;
+        margin: 0 auto !important;
+
+        text-align: left !important;
+        box-sizing: border-box !important;
+    }
+
+    #skillTxt,
+    #experienceTxt {
+        font-size: 17px !important;
+        line-height: 2 !important;
+    }
+
+    .skill3TxtDiv {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: min(680px, 90%) !important;
+        max-width: 680px !important;
+        margin: 45px auto 25px auto !important;
+
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+        gap: 55px !important;
+
+        text-align: center !important;
+    }
+
+    .skill3Txt {
+        width: auto !important;
+        min-width: 150px !important;
+        text-align: center !important;
+    }
+
+    .skillPara {
+        width: auto !important;
+        margin: 0 !important;
+
+        font-size: 48px !important;
+        line-height: 1 !important;
+        text-align: center !important;
+    }
+
+    .skillShort {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        margin-top: 12px !important;
+        font-size: 23px !important;
+        line-height: 1.2 !important;
+
+        text-align: center !important;
+    }
+
+    .readMoreSkill {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        margin: 15px auto 0 auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Hide right-side desktop decoration for tablet-style center layout */
+    .skillPicsDiv,
+    .skillPicTxtDiv,
+    #dotLine {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+}
+
