@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Studies</title>
+    <link rel="stylesheet" href="project-details.css">
+    <link rel="shortcut icon" href="./pictures/briefcase (1).png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="pd-header">
+        <a href="index.html" class="pd-brand">Portfolio.</a>
+        <nav class="pd-nav">
+            <a href="index.html#homeSec">Home</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="readmore.html">Read More</a>
+            <a href="index.html#contact-section">Contact</a>
+        </nav>
+        <a href="index.html#projects" class="pd-back">Back</a>
+    </header>
+
+    <!-- SIDE PROGRESS RAIL -->
+    <nav class="pd-rail" aria-label="Project navigation">
+        <div class="pd-rail-line"><span class="pd-rail-fill" id="railFill"></span></div>
+        <ul id="railList">
+            <li><a href="#finetech" data-index="0"><span class="pd-rail-num">01</span><span
+                        class="pd-rail-label">FineTech</span></a></li>
+            <li><a href="#jarvis" data-index="1"><span class="pd-rail-num">02</span><span
+                        class="pd-rail-label">Jarvis</span></a></li>
+            <li><a href="#quantum" data-index="2"><span class="pd-rail-num">03</span><span
+                        class="pd-rail-label">Quantum</span></a></li>
+            <li><a href="#currency" data-index="3"><span class="pd-rail-num">04</span><span
+                        class="pd-rail-label">Currency</span></a></li>
+            <li><a href="#luminia" data-index="4"><span class="pd-rail-num">05</span><span
+                        class="pd-rail-label">Luminia</span></a></li>
+            <li><a href="#campus" data-index="5"><span class="pd-rail-num">06</span><span class="pd-rail-label">Campus
+                        Net</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- MOBILE PROGRESS BAR -->
+    <div class="pd-mobile-progress"><span id="mobileProgressFill"></span></div>
+
+    <main>
+
+        <!-- INTRO -->
+        <section class="pd-intro">
+            <p class="pd-eyebrow">$ ls ./projects --verbose</p>
+            <h1>Case Studies</h1>
+            <p class="pd-intro-text">
+                Six builds, six different problems. Each section below breaks down what I was
+                solving, how I actually built it, the stack decisions behind it, and what went
+                wrong along the way because that last part is usually the most useful one
+                in an interview.
+            </p>
+            <p class="pd-intro-scroll">Scroll to begin ↓</p>
+        </section>
+
+        <!-- ================= PROJECT 01 : FINETECH ================= -->
+        <section class="pd-project" id="finetech">
+            <div class="pd-project-inner">
+
+                <div class="pd-project-head">
+                    <h2>FineTech Banking</h2>
+                    <div class="pd-chip-row">
+                        <span class="pd-chip">React.js</span>
+                        <span class="pd-chip">Redux Toolkit</span>
+                        <span class="pd-chip">Tailwind CSS</span>
+                        <span class="pd-chip">Node.js</span>
+                        <span class="pd-chip">Express.js</span>
+                        <span class="pd-chip">MongoDB</span>
+                        <span class="pd-chip">Mongoose</span>
+                        <span class="pd-chip">JWT</span>
+                        <span class="pd-chip">REST API</span>
+                        <span class="pd-chip">Nodemailer</span>
+                    </div>
+                </div>
+
+                <div class="pd-project-grid">
+
+                    <div class="pd-project-text">
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Problem</p>
+                            <p>Most demo banking applications focus on visual design while relying on static or
+                                unrealistic data. I wanted FineTech to behave like a real digital banking platform,
+                                where users could securely manage accounts, perform deposits, withdrawals, and
+                                transfers, and see balances update instantly with every transaction. The goal was to
+                                build a system that prioritized data integrity, secure authentication, and a seamless
+                                user experience instead of simply replicating a banking interface.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Build</p>
+                            <p>The frontend is built with React and Redux Toolkit, communicating with a Node.js and
+                                Express REST API, while MongoDB stores users, accounts, ledger entries, and transaction
+                                records in separate collections. Every transfer request passes through a secure
+                                authenticated endpoint where the sender's account is validated, the available balance is
+                                verified, and the transfer amount is debited from the sender before being credited to
+                                the recipient. Each operation generates corresponding ledger entries and a transaction
+                                record, ensuring every financial movement is fully traceable and account balances remain
+                                synchronized. Once the transfer is successfully completed, Nodemailer automatically
+                                dispatches confirmation emails to both the sender and the recipient, providing immediate
+                                transaction notifications and improving transparency across the platform.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; Stack Breakdown</p>
+                            <ul class="pd-stack-list">
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">React.js</b> : Built a
+                                    responsive, component-based banking interface with Redux
+                                    Toolkit for managing authentication, account data, balances, and transaction
+                                    history.</li>
+
+                                <li><b style="color: rgb(250, 1, 250); font-size: 20px;">Node.js + Express.js</b> :
+                                    Developed a modular REST API secured with JWT
+                                    authentication, handling user authentication, account management, fund transfers,
+                                    ledger entries, and transaction processing.</li>
+
+                                <li><b style="color: rgb(250, 1, 250); font-size: 20px;">MongoDB + Mongoose</b> : Stored
+                                    users, accounts, ledger entries, and transaction
+                                    records in separate collections with schema validation, unique indexes for critical
+                                    fields, and structured data models to ensure consistency and integrity.</li>
+                            </ul>
+                        </div>
+
+                        <div class="pd-block pd-block-challenge">
+                            <p class="pd-block-label">&bull; Key Challenge</p>
+                            <p>Maintaining financial consistency during money transfers. Every transfer needed to update
+                                two separate accounts while also creating ledger entries and a transaction record. I
+                                designed the transfer workflow to validate the sender's available balance before
+                                processing the transaction, execute the debit and credit operations in sequence, record
+                                the transfer in the ledger, and only send confirmation emails after the transaction
+                                completed successfully. This ensured account balances remained accurate and every
+                                financial operation was fully traceable..</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pd-project-media">
+                        <div class="pd-video-frame">
+                            <div class="pd-video-chrome">
+                                <span class="pd-chrome-dot"></span><span class="pd-chrome-dot"></span><span
+                                    class="pd-chrome-dot"></span>
+                                <span class="pd-chrome-url">finetech-banking.live</span>
+                            </div>
+                            <video controls poster="pictures/finetech.jpeg" preload="none">
+                                <source src="videos/finetech-demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="pd-btn-row">
+                            <a href="#" class="pd-btn pd-btn-primary" target="_blank">Live Demo</a>
+                            <a href="https://github.com/chzaeem47/Finetech-core-Backend.git" class="pd-btn pd-btn-icon"
+                                target="_blank" aria-label="GitHub repository">
+                                <box-icon name="github" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/muhammad-zaeem-ahmad-06a5a0363_fintech-nodejs-expressjs-ugcPost-7477469651673993216-g35e/"
+                                class="pd-btn pd-btn-icon" target="_blank" aria-label="LinkedIn post">
+                                <box-icon name="linkedin" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECT 02 : JARVIS ================= -->
+        <section class="pd-project" id="jarvis">
+            <div class="pd-project-inner">
+
+                <div class="pd-project-head">
+                    <h2>Jarvis AI Assistant</h2>
+                    <div class="pd-chip-row">
+                        <span class="pd-chip">Python (Flask)</span>
+                        <span class="pd-chip">HTML5</span>
+                        <span class="pd-chip">CSS3</span>
+                        <span class="pd-chip">JavaScript</span>
+                        <span class="pd-chip">Selenium</span>
+                        <span class="pd-chip">PyAutoGUI</span>
+                        <span class="pd-chip">Speech Recognition</span>
+                        <span class="pd-chip">WhatsApp Automation</span>
+                    </div>
+                </div>
+
+                <div class="pd-project-grid">
+
+                    <div class="pd-project-text">
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Problem</p>
+                            <p>Most AI assistants are limited to answering questions through text or voice, requiring
+                                users to manually switch between applications to perform everyday tasks. I wanted JARVIS
+                                to go beyond conversation by acting as a desktop assistant capable of automating real
+                                actions, such as sending WhatsApp messages, initiating voice or video calls, and
+                                responding to voice commands through a single interface.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Build</p>
+                            <p>I built JARVIS as an AI-powered desktop assistant with both voice and text interaction,
+                                combining natural language capabilities with task automation. The application
+                                understands user commands, processes them through a Python backend, and performs actions
+                                such as sending WhatsApp messages, initiating voice and video calls, and responding
+                                conversationally. Browser automation is powered by Selenium, while desktop interactions
+                                are handled with PyAutoGUI, enabling JARVIS to automate tasks that would otherwise
+                                require manual user input.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; Stack Breakdown</p>
+                            <ul class="pd-stack-list">
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Flask</b>: Backend API layer
+                                    responsible for command routing, AI request
+                                    handling, and automation workflows.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Selenium</b> : Automates
+                                    WhatsApp Web to send messages and initiate voice and
+                                    video calls.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">PyAutoGUI</b> : Simulates
+                                    keyboard and mouse interactions to perform
+                                    desktop-level automation beyond the browser.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">SpeechRecognition + gTTS</b> :
+                                    Converts spoken commands into text and generates
+                                    natural voice responses for a hands-free conversational experience.</li>
+                            </ul>
+                        </div>
+
+                        <div class="pd-block pd-block-challenge">
+                            <p class="pd-block-label">&bull; Key Challenge</p>
+                            <p>Creating a reliable automation workflow across multiple applications. The primary
+                                challenge was translating voice commands into accurate browser and desktop actions while
+                                maintaining a smooth user experience. I solved this by combining Selenium for browser
+                                automation with PyAutoGUI for desktop interactions, allowing JARVIS to execute WhatsApp
+                                messaging, voice calls, and video calls through a consistent command-processing
+                                pipeline.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pd-project-media">
+                        <div class="pd-video-frame">
+                            <div class="pd-video-chrome">
+                                <span class="pd-chrome-dot"></span><span class="pd-chrome-dot"></span><span
+                                    class="pd-chrome-dot"></span>
+                                <span class="pd-chrome-url">jarvis-assistant.local</span>
+                            </div>
+                            <video controls poster="pictures/jarvis.JPG" preload="none">
+                                <source src="videos/jarvis-demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="pd-btn-row">
+                            <a href="#" class="pd-btn pd-btn-primary" target="_blank">Live Demo</a>
+                            <a href="https://github.com/chzaeem47/Jarvis-Ai-Assistant.git" class="pd-btn pd-btn-icon"
+                                target="_blank" aria-label="GitHub repository">
+                                <box-icon name="github" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/muhammad-zaeem-ahmad-06a5a0363_automation-python-ai-ugcPost-7461863917372329985-p5U1/"
+                                class="pd-btn pd-btn-icon" target="_blank" aria-label="LinkedIn post">
+                                <box-icon name="linkedin" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECT 03 : QUANTUM ================= -->
+        <section class="pd-project" id="quantum">
+            <div class="pd-project-inner">
+
+                <div class="pd-project-head">
+                    <h2>Quantum AI Web Builder</h2>
+                    <div class="pd-chip-row">
+                        <span class="pd-chip">React.js</span>
+                        <span class="pd-chip">Vite</span>
+                        <span class="pd-chip">Redux Toolkit</span>
+                        <span class="pd-chip">Node.js</span>
+                        <span class="pd-chip">Express.js</span>
+                        <span class="pd-chip">MongoDB</span>
+                        <span class="pd-chip">Firebase Auth</span>
+                        <span class="pd-chip">OpenRouter</span>
+                        <span class="pd-chip">Tailwind CSS</span>
+                        <span class="pd-chip">Vercel</span>
+                    </div>
+                </div>
+
+                <div class="pd-project-grid">
+
+                    <div class="pd-project-text">
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Problem</p>
+                            <p>Most AI website generators either produce generic templates or require significant manual
+                                editing before a site is ready to use. I wanted Quantum AI to eliminate that friction by
+                                allowing users to describe their idea in plain English and receive a modern, responsive
+                                website that is organized, editable, and ready to deploy in just a few clicks.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Build</p>
+                            <p>I built Quantum AI as a full-stack AI-powered website generation platform using React,
+                                Node.js, Express.js, and MongoDB. Users can authenticate with Google, describe their
+                                website using a single prompt, and instantly generate a complete frontend with modern
+                                layouts, responsive design, and clean code. The platform manages generated projects,
+                                stores them securely in MongoDB, and integrates OpenRouter to power AI-driven code
+                                generation. Once satisfied with the result, users can deploy their website with a
+                                streamlined one-click deployment workflow.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; Stack Breakdown</p>
+                            <ul class="pd-stack-list">
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">React.js + Vite</b> : Built a
+                                    fast, responsive interface for prompt-based website
+                                    generation, project management, and live previews.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Redux Toolkit</b> : Managed
+                                    authentication, generated projects, application
+                                    state, and AI workflow data across the platform.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Node.js + Express.js</b> :
+                                    Developed a modular REST API responsible for AI
+                                    request handling, project management, deployment workflows, and user operations.
+                                </li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">MongoDB + Mongoose</b> :
+                                    Stored user accounts, generated websites, project
+                                    metadata, and deployment information with structured schemas.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Firebase Authentication</b> :
+                                    Enabled secure Google Sign-In and simplified user
+                                    authentication.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">OpenRouter API</b> : Connected
+                                    large language models to generate complete
+                                    websites from natural-language prompts.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Tailwind CSS</b> : Delivered
+                                    responsive, modern, and scalable user interfaces
+                                    with utility-first styling.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Vercel</b> : Integrated
+                                    one-click deployment to publish AI-generated websites
+                                    instantly.</li>
+                            </ul>
+                        </div>
+
+                        <div class="pd-block pd-block-challenge">
+                            <p class="pd-block-label">&bull; Key Challenge</p>
+                            <p>Transforming a single user prompt into a complete, deployable website. The challenge was
+                                designing a workflow that could reliably convert natural-language requirements into
+                                structured frontend code while maintaining responsiveness, modern UI standards, and
+                                deployment readiness. I solved this by creating an AI-driven generation pipeline that
+                                processes prompts, structures project files, manages generated code, and enables
+                                one-click deployment through an integrated deployment workflow.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pd-project-media">
+                        <div class="pd-video-frame">
+                            <div class="pd-video-chrome">
+                                <span class="pd-chrome-dot"></span><span class="pd-chrome-dot"></span><span
+                                    class="pd-chrome-dot"></span>
+                                <span class="pd-chrome-url">quantum-builder.app</span>
+                            </div>
+                            <video controls poster="pictures/quantum.PNG" preload="none">
+                                <source src="videos/quantum-demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="pd-btn-row">
+                            <a href="#" class="pd-btn pd-btn-primary" target="_blank">Live Demo</a>
+                            <a href="https://github.com/chzaeem47/AI-Website-Builder.git" class="pd-btn pd-btn-icon"
+                                target="_blank" aria-label="GitHub repository">
+                                <box-icon name="github" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/muhammad-zaeem-ahmad-06a5a0363_ai-artificialintelligence-webdevelopment-ugcPost-7482516752795492352-1acU/"
+                                class="pd-btn pd-btn-icon" target="_blank" aria-label="LinkedIn post">
+                                <box-icon name="linkedin" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECT 04 : CURRENCY ================= -->
+        <section class="pd-project" id="currency">
+            <div class="pd-project-inner">
+
+                <div class="pd-project-head">
+
+                    <h2>Global Currency Exchanger</h2>
+                    <div class="pd-chip-row">
+                        <span class="pd-chip">Html5</span>
+                        <span class="pd-chip">JavaScript</span>
+                        <span class="pd-chip">Tailwind</span>
+                        <span class="pd-chip">Node.js</span>
+                        <span class="pd-chip">Express.js</span>
+                        <span class="pd-chip">MySQL</span>
+                    </div>
+                </div>
+
+                <div class="pd-project-grid">
+
+                    <div class="pd-project-text">
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Problem</p>
+                            <p>Most online currency converters only provide one-time calculations without preserving
+                                previous conversions, making it difficult for users to review or compare past exchange
+                                results. I wanted to build a responsive currency exchange application that not only
+                                delivers accurate real-time exchange rates but also maintains a searchable history of
+                                conversions with timestamps, creating a more practical and user-friendly experience.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Build</p>
+                            <p>I developed a full-stack Global Currency Exchanger using React.js, integrating a
+                                real-time exchange rate API to provide accurate conversions across hundreds of
+                                international currencies. The application displays each currency alongside its
+                                corresponding national flag, supports instant currency swapping, and performs real-time
+                                calculations with asynchronous API requests. To extend its functionality beyond simple
+                                conversion, every exchange is recorded in a MySQL database with timestamps, allowing
+                                users to review their conversion history while demonstrating persistent data management
+                                and backend integration.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; Stack Breakdown</p>
+                            <ul class="pd-stack-list">
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">React.js</b> — Built a
+                                    responsive, component-based interface for real-time
+                                    currency conversion, country flag rendering, and conversion history.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Exchange Rate API</b> —
+                                    Integrated live exchange rate data to provide accurate
+                                    and up-to-date currency conversions.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Axios</b> — Managed
+                                    asynchronous API requests and synchronized live exchange rate
+                                    data with the frontend.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Node.js + Express.js</b> —
+                                    Developed RESTful APIs to process conversion history
+                                    requests and communicate with the database.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">MySQL</b> — Stored conversion
+                                    history with source and destination currencies,
+                                    converted amounts, exchange rates, and timestamps for persistent record keeping.
+                                </li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">JavaScript (ES6+)</b> —
+                                    Implemented conversion logic, currency swapping,
+                                    validation, and dynamic application behavior.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Tailwind CSS</b> — Designed a
+                                    modern, responsive interface optimized for desktop
+                                    and
+                                    mobile devices.</li>
+                            </ul>
+                        </div>
+
+                        <div class="pd-block pd-block-challenge">
+                            <p class="pd-block-label">&bull; Key Challenge</p>
+                            <p>Combining real-time financial data with persistent conversion history. The primary
+                                challenge was integrating live exchange-rate updates while maintaining an accurate
+                                record of each conversion. I designed the application to fetch real-time exchange rates,
+                                perform instant calculations, and persist every successful conversion to a MySQL
+                                database with timestamps, enabling users to revisit previous exchanges without affecting
+                                application performance.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pd-project-media">
+                        <div class="pd-video-frame">
+                            <div class="pd-video-chrome">
+                                <span class="pd-chrome-dot"></span><span class="pd-chrome-dot"></span><span
+                                    class="pd-chrome-dot"></span>
+                                <span class="pd-chrome-url">currency-exchanger.live</span>
+                            </div>
+                            <video controls poster="pictures/global.JPG" preload="none">
+                                <source src="videos/currency-demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="pd-btn-row">
+                            <a href="#" class="pd-btn pd-btn-primary" target="_blank">Live Demo</a>
+                            <a href="https://github.com/chzaeem47/global-currency-exchanger.git"
+                                class="pd-btn pd-btn-icon" target="_blank" aria-label="GitHub repository">
+                                <box-icon name="github" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/muhammad-zaeem-ahmad-06a5a0363_just-built-and-deployed-a-full-stack-currency-ugcPost-7466946844573700096-d594/"
+                                class="pd-btn pd-btn-icon" target="_blank" aria-label="LinkedIn post">
+                                <box-icon name="linkedin" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECT 05 : LUMINIA ================= -->
+        <section class="pd-project" id="luminia">
+            <div class="pd-project-inner">
+
+                <div class="pd-project-head">
+                    <h2>Luminia By Zaeem</h2>
+                    <div class="pd-chip-row">
+                        <span class="pd-chip">React.js</span>
+                        <span class="pd-chip">Vite</span>
+                        <span class="pd-chip">Tailwind CSS</span>
+                        <span class="pd-chip">Node.js</span>
+                        <span class="pd-chip">Express.js</span>
+                        <span class="pd-chip">Pollinations AI</span>
+                        <span class="pd-chip">Local Storage</span>
+                        <span class="pd-chip">Caching</span>
+                    </div>
+                </div>
+
+                <div class="pd-project-grid">
+
+                    <div class="pd-project-text">
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Problem</p>
+                            <p>Many AI image generation tools prioritize powerful models but overlook the overall user
+                                experience, often requiring users to regenerate images or losing previously created
+                                content between sessions. I wanted to build Luminia as a fast and intuitive AI image
+                                generator that produces high-quality images from simple text prompts while preserving
+                                generation history locally and minimizing unnecessary API requests.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Build</p>
+                            <p>I built Luminia as a responsive AI image generation application using React.js and
+                                Node.js. Users can generate high-quality images from natural-language prompts through
+                                the Pollinations AI API and instantly preview their creations within a modern, intuitive
+                                interface. To improve performance and usability, generated images and prompt history are
+                                cached and persisted in the browser using localStorage, allowing users to revisit
+                                previous generations without relying on a backend database. The application combines
+                                efficient client-side state management with caching strategies to deliver a faster and
+                                more seamless creative experience.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">// Stack Breakdown</p>
+                            <ul class="pd-stack-list">
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">React.js + Vite</b> : Built a
+                                    responsive, component-based interface for
+                                    prompt-based AI image generation and gallery management.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Node.js + Express.js</b> :
+                                    Developed the backend responsible for AI request
+                                    handling and application logic.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Pollinations AI</b> :
+                                    Integrated text-to-image generation, transforming
+                                    natural-language prompts into high-quality AI-generated artwork.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Local Storage</b> : Persisted
+                                    generated images, prompts, and user history
+                                    locally, allowing users to revisit previous generations across browser sessions.
+                                </li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Caching</b> : Implemented
+                                    client-side caching to reduce redundant image
+                                    generation requests, improve responsiveness, and enhance the overall user
+                                    experience.</li>
+
+                            </ul>
+                        </div>
+
+                        <div class="pd-block pd-block-challenge">
+                            <p class="pd-block-label">&bull; Key Challenge</p>
+                            <p>Balancing performance with a smooth user experience. The primary challenge was preventing
+                                unnecessary image generation requests while ensuring users could easily access their
+                                previous creations. I addressed this by implementing client-side caching and
+                                localStorage persistence, allowing generated images and prompt history to be reused
+                                across sessions. This reduced redundant API calls, improved application responsiveness,
+                                and provided users with a more seamless creative workflow.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pd-project-media">
+                        <div class="pd-video-frame">
+                            <div class="pd-video-chrome">
+                                <span class="pd-chrome-dot"></span><span class="pd-chrome-dot"></span><span
+                                    class="pd-chrome-dot"></span>
+                                <span class="pd-chrome-url">luminia.app</span>
+                            </div>
+                            <video controls poster="pictures/luminia.JPG" preload="none">
+                                <source src="videos/luminia-demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="pd-btn-row">
+                            <a href="#" class="pd-btn pd-btn-primary" target="_blank">Live Demo</a>
+                            <a href="https://github.com/chzaeem47/Luminia-Ai-Image-Generator.git"
+                                class="pd-btn pd-btn-icon" target="_blank" aria-label="GitHub repository">
+                                <box-icon name="github" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/muhammad-zaeem-ahmad-06a5a0363_artificialintelligence-generativeai-fullstackdevelopment-ugcPost-7473420892447010816-V7JD/"
+                                class="pd-btn pd-btn-icon" target="_blank" aria-label="LinkedIn post">
+                                <box-icon name="linkedin" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECT 06 : CAMPUS NETWORK ================= -->
+        <section class="pd-project" id="campus">
+            <div class="pd-project-inner">
+
+                <div class="pd-project-head">
+                    <h2>Campus Network Design</h2>
+                    <div class="pd-chip-row">
+                        <span class="pd-chip">Cisco Packet Tracer</span>
+                        <span class="pd-chip">Networking</span>
+                        <span class="pd-chip">VLANs</span>
+                        <span class="pd-chip">Routing</span>
+                        <span class="pd-chip">Switching</span>
+                        <span class="pd-chip">IPv4</span>
+                        <span class="pd-chip">Subnetting</span>
+                        <span class="pd-chip">DHCP</span>
+                        <span class="pd-chip">DNS</span>
+                    </div>
+                </div>
+
+                <div class="pd-project-grid">
+
+                    <div class="pd-project-text">
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Problem</p>
+                            <p>Modern educational institutions require a reliable network infrastructure capable of
+                                supporting thousands of devices, multiple departments, and continuous communication
+                                across campus. I wanted to design a scalable campus network that provided efficient
+                                connectivity, logical network segmentation, and secure communication while minimizing
+                                congestion and simplifying network management.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; The Build</p>
+                            <p>I designed a complete campus network architecture using Cisco Packet Tracer, connecting
+                                multiple academic departments, administrative offices, computer laboratories, and shared
+                                campus services. The network was segmented using VLANs to improve security and reduce
+                                broadcast traffic, while routers and Layer 3 switching enabled inter-VLAN communication.
+                                Dynamic routing and IP addressing were carefully planned to ensure reliable
+                                communication, efficient traffic flow, and a scalable infrastructure capable of
+                                supporting future expansion.</p>
+                        </div>
+
+                        <div class="pd-block">
+                            <p class="pd-block-label">&bull; Stack Breakdown</p>
+                            <ul class="pd-stack-list">
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Cisco Packet Tracer</b> : Designed and simulated the complete campus network
+                                    topology.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">VLANs</b> : Segmented departments into separate broadcast domains to improve
+                                    security, organization, and network performance.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Routing</b> : Configured inter-VLAN routing to enable secure communication
+                                    between different departments.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">IPv4 Addressing</b> : Planned and assigned structured IP addressing schemes using
+                                    subnetting principles.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Switching</b> : Configured Layer 2 switches for efficient local network
+                                    communication and VLAN implementation.</li>
+
+                                <li><b style="color: rgb(254, 55, 254); font-size: 20px;">Network Services</b> : Configured essential services such as DHCP, DNS, and web
+                                    connectivity where required by the network design.</li>
+                            </ul>
+                        </div>
+
+                        <div class="pd-block pd-block-challenge">
+                            <p class="pd-block-label">&bull; Key Challenge</p>
+                            <p>Designing a network that balanced scalability, security, and efficient communication. The
+                                primary challenge was segmenting multiple campus departments while ensuring seamless
+                                connectivity across the entire network. I addressed this by implementing VLAN-based
+                                network segmentation, structured IP addressing, and inter-VLAN routing, creating a
+                                design that reduces unnecessary broadcast traffic, improves security, and remains easy
+                                to manage as the network grows.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pd-project-media">
+                        <div class="pd-video-frame">
+                            <div class="pd-video-chrome">
+                                <span class="pd-chrome-dot"></span><span class="pd-chrome-dot"></span><span
+                                    class="pd-chrome-dot"></span>
+                                <span class="pd-chrome-url">packet-tracer-topology.pkt</span>
+                            </div>
+                            <video controls poster="pictures/campus-network.jpg" preload="none">
+                                <source src="videos/campus-network-demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="pd-btn-row">
+                            <a href="pictures/campus-network-topology.pkt" class="pd-btn pd-btn-primary"
+                                target="_blank">Download Topology</a>
+                            <a href="https://github.com/chzaeem47" class="pd-btn pd-btn-icon" target="_blank"
+                                aria-label="GitHub profile">
+                                <box-icon name="github" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/muhammad-zaeem-ahmad-06a5a0363_networking-cisco-packettracer-ugcPost-7464945775748308992-0v8W/"
+                                class="pd-btn pd-btn-icon" target="_blank" aria-label="LinkedIn post">
+                                <box-icon name="linkedin" type="logo" color="#ffffff"></box-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer class="pd-footer">
+            <p>That's all six more get added as I build them</p>
+            <a href="index.html#contact-section" class="pd-btn pd-btn-primary">Get In Touch</a>
+        </footer>
+
+    </main>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="project-details.js"></script>
+</body>
+
+</html>
