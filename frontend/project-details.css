@@ -449,6 +449,7 @@ ul { list-style: none; }
     .pd-rail { right: 20px; }
     .pd-project-grid { grid-template-columns: 1fr; }
     .pd-project-media { position: relative; top: auto; margin-top: 10px; }
+
 }
 
 @media (max-width: 900px) {
@@ -460,7 +461,7 @@ ul { list-style: none; }
 }
 
 @media (max-width: 560px) {
-    .pd-btn-row { flex-direction: column; }
-    .pd-btn-icon { width: 100%; }
+    .pd-btn-row { flex-direction:row}
     .pd-project-head h2 { font-size: 34px; }
 }
+
