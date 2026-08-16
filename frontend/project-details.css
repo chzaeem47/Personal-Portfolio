@@ -465,3 +465,7 @@ ul { list-style: none; }
     .pd-project-head h2 { font-size: 34px; }
 }
 
+.unavailable-btn {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
