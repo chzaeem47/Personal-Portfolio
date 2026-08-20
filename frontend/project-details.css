@@ -469,3 +469,315 @@ ul { list-style: none; }
     cursor: not-allowed;
     opacity: 0.6;
 }
+
+
+
+/* =========================================================
+   SMALL PROJECTS — VIDEO-FIRST SHOWCASE
+   Same visual language as the main project cards, without
+   the large outer projects-folder wrapper.
+   ========================================================= */
+
+.pd-small-projects {
+    min-height: 100vh;
+    padding: 120px 6vw 110px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pd-small-projects-head {
+    width: min(1050px, 100%);
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.pd-small-projects-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 5vw, 64px);
+    margin: 14px 0 18px;
+    letter-spacing: -0.6px;
+}
+
+.pd-small-projects-intro {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--text-dim);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.pd-small-grid {
+    width: min(1320px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+    perspective: 1200px;
+}
+
+.pd-small-card {
+    position: relative;
+    min-width: 0;
+    padding: 18px;
+    border-radius: 28px;
+    background: #0B0033;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(70px) scale(0.95);
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.48),
+        inset 0 0 24px rgba(0, 234, 255, 0.05);
+    animation: pdSmallProjectEntry 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: var(--small-delay);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pd-small-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 15% 0%, rgba(0, 234, 255, 0.14), transparent 36%),
+        radial-gradient(circle at 100% 100%, rgba(255, 45, 247, 0.10), transparent 40%);
+}
+
+@keyframes pdSmallProjectEntry {
+    0% {
+        opacity: 0;
+        transform: translateY(70px) scale(0.95) rotateX(10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateX(0deg);
+    }
+}
+
+.pd-small-card:hover {
+    transform: translateY(-9px) scale(1.015);
+    border-color: rgba(0, 234, 255, 0.35);
+    box-shadow:
+        0 0 18px rgba(0, 234, 255, 0.42),
+        0 0 28px rgba(155, 53, 255, 0.25),
+        0 22px 45px rgba(0, 0, 0, 0.55),
+        inset 0 0 26px rgba(0, 106, 255, 0.12);
+}
+
+.pd-small-video-box {
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    box-shadow:
+        inset 0 0 18px rgba(0, 234, 255, 0.10),
+        0 0 14px rgba(0, 106, 255, 0.22);
+    position: relative;
+}
+
+.pd-small-video-chrome {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 38px;
+    padding: 0 12px;
+    background: rgba(255, 255, 255, 0.045);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.pd-small-chrome-dot-red {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(245, 2, 2);
+    opacity: 0.72;
+    flex: 0 0 auto;
+}
+.pd-small-chrome-dot-yellow {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: yellow;
+    opacity: 0.72;
+    flex: 0 0 auto;
+}
+.pd-small-chrome-dot-green {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(4, 244, 4);
+    opacity: 0.72;
+    flex: 0 0 auto;
+}
+
+.pd-small-chrome-url {
+    margin-left: 7px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-faint);
+    font-family: var(--font-mono);
+    font-size: 11px;
+}
+
+.pd-small-video-box video {
+    width: 100%;
+    height: auto !important;
+    max-width: 100%;
+    display: block;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    background: #000;
+}
+
+/* Keep the entire source video visible in native fullscreen too.
+   Empty space is intentional; the video is never cropped or stretched. */
+.pd-small-video-box video:fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    background: #000 !important;
+}
+
+.pd-small-video-box video:-webkit-full-screen {
+    width: 100vw !important;
+    height: 100vh !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    background: #000 !important;
+}
+
+.pd-small-video-box video:fullscreen::backdrop,
+.pd-small-video-box video:-webkit-full-screen::backdrop {
+    background: #000;
+}
+
+.pd-small-content {
+    position: relative;
+    z-index: 1;
+    padding: 19px 3px 2px;
+}
+
+.pd-small-number {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: var(--cyan);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.pd-small-content h3 {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    line-height: 1.2;
+    margin: 0 0 9px;
+}
+
+.pd-small-content p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin: 0 0 15px;
+}
+
+.pd-small-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.pd-small-tags span {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background:
+        radial-gradient(circle at 30% 25%, rgba(93, 140, 255, 0.45), transparent 35%),
+        linear-gradient(145deg, #071438, #16073f 55%, #24006b);
+    border: 1.5px solid rgba(130, 170, 255, 0.75);
+    box-shadow:
+        inset 0 2px 1px rgba(255, 255, 255, 0.25),
+        inset 0 -4px 5px rgba(0, 0, 0, 0.45),
+        0 0 8px rgba(0, 132, 255, 0.55),
+        0 0 14px rgba(153, 0, 255, 0.35);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.45);
+}
+
+@media (max-width: 1050px) {
+    .pd-small-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 720px) {
+    .pd-small-projects {
+        padding: 90px 6vw 80px;
+    }
+
+    .pd-small-projects-head {
+        margin-bottom: 34px;
+    }
+
+    .pd-small-grid {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        gap: 22px;
+    }
+
+    .pd-small-card {
+        padding: 16px;
+        border-radius: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .pd-small-projects-intro {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .pd-small-content h3 {
+        font-size: 23px;
+    }
+
+    .pd-small-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .pd-small-projects {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .pd-small-card {
+        padding: 14px;
+    }
+
+    .pd-small-video-chrome {
+        min-height: 34px;
+    }
+
+    .pd-small-chrome-url {
+        font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pd-small-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

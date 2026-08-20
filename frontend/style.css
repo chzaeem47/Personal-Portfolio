@@ -7094,4 +7094,39 @@ body.splash-active {
     }
 }
 
+.projects-see-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
 
+.see-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding:10px;
+    min-width: 220px;
+    background-color: aqua;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid aqua;
+    border-radius: 35px;
+    transition: all 0.3s ease;
+}
+
+.see-more-btn box-icon {
+    transition: transform 0.3s ease;
+}
+
+.see-more-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+.see-more-btn:hover box-icon {
+    transform: translateX(6px);
+}
