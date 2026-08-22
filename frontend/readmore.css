@@ -67,18 +67,6 @@ body::after {
     100% { transform: rotate(-5deg) scale(1); }
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(0, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 255, 0.035) 1px, transparent 1px);
-    background-size: 72px 72px;
-    mask-image: radial-gradient(circle at center, black 0%, transparent 72%);
-    pointer-events: none;
-    z-index: -1;
-}
 
 ::selection {
     background: rgba(0, 255, 255, 0.25);
