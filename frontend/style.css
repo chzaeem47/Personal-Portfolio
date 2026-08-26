@@ -218,8 +218,8 @@ h2{
 .iconDiv:hover{
     transform: translateY(-5px) !important;
     box-shadow: 0 0 10px white !important;
-    transition: 0.3s ease !important;
 }
+
 #cvBtn{
     width: 150px;
     height: 50px;
